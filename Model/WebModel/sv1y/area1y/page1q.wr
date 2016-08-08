@@ -1,0 +1,118 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="715" gr:y="0" id="sv1y#area1y#page1q" name="Reserva de vuelo">
+  <ContentUnits>
+    <MultiEntryUnit gr:x="185" gr:y="20" id="sv1y#area1y#page1q#meu1q" name="Pasajeros" minLength="1" entity="ent1q" linkOrder="sv1y#area1y#page1q#meu1q#ln31q">
+      <Field id="sv1y#area1y#page1q#meu1q#fld1q" name="nombrePasajero" type="string" modifiable="true" attribute="ent1q#att2q">
+        <VRules>
+          <MandatoryValidationRule id="sv1y#area1y#page1q#meu1q#fld1q#mnd9q" name="Mandatory9" errorMessage="El campo es obligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1y#area1y#page1q#meu1q#fld2q" name="emailPasajero" type="string" modifiable="true" attribute="ent1q#att3q">
+        <VRules>
+          <EMailValidationRule id="sv1y#area1y#page1q#meu1q#fld2q#email1q" name="EMail1" errorMessage="Formato de correo incorrecto"/>
+          <MandatoryValidationRule id="sv1y#area1y#page1q#meu1q#fld2q#mnd7q" name="Mandatory7" errorMessage="El campo es obligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1y#area1y#page1q#meu1q#fld3q" name="fechaNacimiento" type="date" modifiable="true" attribute="ent1q#att4q">
+        <VRules>
+          <CompareValidationRule id="sv1y#area1y#page1q#meu1q#fld3q#cmp2q" name="Compare2" predicate="lt" value="today()" errorMessage="La fecha no puede ser posterior al d&#237;a de hoy"/>
+          <MandatoryValidationRule id="sv1y#area1y#page1q#meu1q#fld3q#mnd8q" name="Mandatory8" errorMessage="El campo es obligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1y#area1y#page1q#meu1q#fld4q" name="cedula" type="string" modifiable="true" attribute="ent1q#att5q">
+        <VRules>
+          <MandatoryValidationRule id="sv1y#area1y#page1q#meu1q#fld4q#mnd6q" name="Mandatory6"/>
+        </VRules>
+      </Field>
+      <Field id="sv1y#area1y#page1q#meu1q#fld5q" name="id_pasajero" type="integer" modifiable="false" attribute="ent1q#att1q" hidden="true"/>
+      <Link id="sv1y#area1y#page1q#meu1q#ln31q" name="Guardar" to="sv1y#area1y#miu7q" type="normal" validate="true">
+        <LinkParameter id="sv1y#area1y#page1q#meu1q#ln31q#par112q" name="cedula_cedula" source="sv1y#area1y#page1q#meu1q#fld4q" target="sv1y#area1y#miu7q.mov2y#mpkg3q#opm10q#icu11q#icp31q"/>
+        <LinkParameter id="sv1y#area1y#page1q#meu1q#ln31q#par113q" name="emailPasajero_emailPasajero" source="sv1y#area1y#page1q#meu1q#fld2q" target="sv1y#area1y#miu7q.mov2y#mpkg3q#opm10q#icu11q#icp32q"/>
+        <LinkParameter id="sv1y#area1y#page1q#meu1q#ln31q#par114q" name="fechaNacimiento_fechaNacimiento" source="sv1y#area1y#page1q#meu1q#fld3q" target="sv1y#area1y#miu7q.mov2y#mpkg3q#opm10q#icu11q#icp33q"/>
+        <LinkParameter id="sv1y#area1y#page1q#meu1q#ln31q#par115q" name="Key [id_pasajero]_KeyCondition3 [id_pasajero]" source="ent1q#att1qKey" target="sv1y#area1y#miu7q.mov2y#mpkg3q#opm10q#icu11q#icp29q"/>
+        <LinkParameter id="sv1y#area1y#page1q#meu1q#ln31q#par116q" name="nombrePasajero_nombrePasajero" source="sv1y#area1y#page1q#meu1q#fld1q" target="sv1y#area1y#miu7q.mov2y#mpkg3q#opm10q#icu11q#icp34q"/>
+      </Link>
+    </MultiEntryUnit>
+    <SelectorUnit gr:x="85" gr:y="170" id="sv1y#area1y#page1q#seu3q" name="Selector Pasajeros" entity="ent1q">
+      <Selector id="sv1y#area1y#page1q#seu3q#su15q" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1y#area1y#page1q#seu3q#su15q#rcond1q" name="Reserva" role="rel1q#role1q" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1y#area1y#page1q#seu3q#ln23q" name="Flow23" to="sv1y#area1y#page1q#meu1q" type="transport" validate="true">
+        <LinkParameter id="sv1y#area1y#page1q#seu3q#ln23q#par19q" name="id_pasajero_Key Condition [id_pasajero]" source="ent1q#att1qArray" target="sv1y#area1y#page1q#meu1q.ent1q#att1q"/>
+        <LinkParameter id="sv1y#area1y#page1q#seu3q#ln23q#par20q" name="Day_PASSING" sourceLinkParameter="sv1y#area1y#page1q#tmu2q#ln24q#par18q" passing="true"/>
+      </Link>
+    </SelectorUnit>
+    <DataUnit gr:x="0" gr:y="0" id="sv1y#area1y#page1q#dau3q" name="Reserva" entity="ent6y" displayAttributes="ent6y#att27y ent6y#att26y rel8y#role16y.userName">
+      <Selector id="sv1y#area1y#page1q#dau3q#su16q" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1y#area1y#page1q#dau3q#su16q#kcond9q" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1y#area1y#page1q#dau3q#ln19q" name="Flow19" to="sv1y#area1y#page1q#seu3q" type="transport" validate="true" automaticCoupling="true"/>
+      <Link id="sv1y#area1y#page1q#dau3q#ln32q" name="Flow32" to="sv1y#area1y#miu7q" type="transport" validate="true" gr:bendpoints="173,-54,-187,-64">
+        <LinkParameter id="sv1y#area1y#page1q#dau3q#ln32q#par117q" name="id_reserva_Reserva.id_reserva(PasajeroToReserva)" source="data.ent6y#att26y" target="sv1y#area1y#miu7q.mov2y#mpkg3q#opm10q#icu11q#icp30q"/>
+      </Link>
+    </DataUnit>
+    <TimeUnit id="sv1y#area1y#page1q#tmu2q" name="Hoy" gr:x="260" gr:y="185">
+      <Link id="sv1y#area1y#page1q#tmu2q#ln24q" name="Flow24" to="sv1y#area1y#page1q#seu3q" type="transport" validate="true">
+        <LinkParameter id="sv1y#area1y#page1q#tmu2q#ln24q#par18q" name="Day_PASSING" source="day" passing="true"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1y#area1y#page1q#dau3q">
+          <layout:Attribute attribute="ent6y#att27y"/>
+          <layout:Attribute attribute="ent6y#att26y"/>
+          <layout:Attribute attribute="rel8y#role16y.userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1y#area1y#page1q#meu1q">
+          <layout:Link link="sv1y#area1y#page1q#meu1q#ln31q"/>
+          <layout:Field field="sv1y#area1y#page1q#meu1q#fld1q"/>
+          <layout:Field field="sv1y#area1y#page1q#meu1q#fld2q"/>
+          <layout:Field field="sv1y#area1y#page1q#meu1q#fld3q"/>
+          <layout:Field field="sv1y#area1y#page1q#meu1q#fld4q"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv1y#area1y#page1q#var3q" name="isHidden" type="boolean" value="true"/>
+</Page>

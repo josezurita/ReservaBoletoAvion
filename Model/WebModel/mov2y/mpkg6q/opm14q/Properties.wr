@@ -1,0 +1,61 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2y#mpkg6q#opm14q" name="CrearUser" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg6q#opm14q#icu17q" gr:x="-40" gr:y="100">
+      <OKLink id="mov2y#mpkg6q#opm14q#icu17q#oln49q" name="OKFlow40" to="mov2y#mpkg6q#opm14q#inn5q">
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#oln49q#par155q" name="oid_Input" source="mov2y#mpkg6q#opm14q#icu17q#icp40q" target="mov2y#mpkg6q#opm14q#inn5q.isnotnull"/>
+      </OKLink>
+      <Link id="mov2y#mpkg6q#opm14q#icu17q#ln60q" name="Flow49" to="mov2y#mpkg6q#opm14q#cru5q" type="transport" validate="true">
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln60q#par175q" name="bithDate_bithDate" source="mov2y#mpkg6q#opm14q#icu17q#icp41q" target="mov2y#mpkg6q#opm14q#cru5q.User#att34y"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln60q#par176q" name="email_email" source="mov2y#mpkg6q#opm14q#icu17q#icp42q" target="mov2y#mpkg6q#opm14q#cru5q.email"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln60q#par177q" name="Group.oid(defaultGroup)_Group.oid(defaultGroup)" source="mov2y#mpkg6q#opm14q#icu17q#icp38q" target="mov2y#mpkg6q#opm14q#cru5q.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln60q#par178q" name="Group.oid(groups)_Group.oid(groups)" source="mov2y#mpkg6q#opm14q#icu17q#icp39q" target="mov2y#mpkg6q#opm14q#cru5q.User2Group.groupOID"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln60q#par179q" name="lastName_lastName" source="mov2y#mpkg6q#opm14q#icu17q#icp43q" target="mov2y#mpkg6q#opm14q#cru5q.User#att29y"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln60q#par180q" name="name_name" source="mov2y#mpkg6q#opm14q#icu17q#icp44q" target="mov2y#mpkg6q#opm14q#cru5q.User#att28y"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln60q#par181q" name="userName_userName" source="mov2y#mpkg6q#opm14q#icu17q#icp46q" target="mov2y#mpkg6q#opm14q#cru5q.userName"/>
+      </Link>
+      <Link id="mov2y#mpkg6q#opm14q#icu17q#ln61q" name="Flow50" to="mov2y#mpkg6q#opm14q#mfu11q" type="transport" validate="true">
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln61q#par166q" name="Group.oid(defaultGroup)" source="mov2y#mpkg6q#opm14q#icu17q#icp38q" target="mov2y#mpkg6q#opm14q#mfu11q.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln61q#par167q" name="Group.oid(groups)" source="mov2y#mpkg6q#opm14q#icu17q#icp39q" target="mov2y#mpkg6q#opm14q#mfu11q.User2Group.groupOID"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln61q#par168q" name="KeyCondition17 [oid]" source="mov2y#mpkg6q#opm14q#icu17q#icp40q" target="mov2y#mpkg6q#opm14q#mfu11q#su31q#kcond19q.userOID"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln61q#par169q" name="bithDate" source="mov2y#mpkg6q#opm14q#icu17q#icp41q" target="mov2y#mpkg6q#opm14q#mfu11q.User#att34y"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln61q#par170q" name="email" source="mov2y#mpkg6q#opm14q#icu17q#icp42q" target="mov2y#mpkg6q#opm14q#mfu11q.email"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln61q#par171q" name="lastName" source="mov2y#mpkg6q#opm14q#icu17q#icp43q" target="mov2y#mpkg6q#opm14q#mfu11q.User#att29y"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln61q#par172q" name="name" source="mov2y#mpkg6q#opm14q#icu17q#icp44q" target="mov2y#mpkg6q#opm14q#mfu11q.User#att28y"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln61q#par173q" name="password" source="mov2y#mpkg6q#opm14q#icu17q#icp45q" target="mov2y#mpkg6q#opm14q#mfu11q.password"/>
+        <LinkParameter id="mov2y#mpkg6q#opm14q#icu17q#ln61q#par174q" name="userName" source="mov2y#mpkg6q#opm14q#icu17q#icp46q" target="mov2y#mpkg6q#opm14q#mfu11q.userName"/>
+      </Link>
+      <InputCollectorParameter id="mov2y#mpkg6q#opm14q#icu17q#icp38q" name="Group.oid(defaultGroup)"/>
+      <InputCollectorParameter id="mov2y#mpkg6q#opm14q#icu17q#icp39q" name="Group.oid(groups)"/>
+      <InputCollectorParameter id="mov2y#mpkg6q#opm14q#icu17q#icp40q" name="KeyCondition17 [oid]"/>
+      <InputCollectorParameter id="mov2y#mpkg6q#opm14q#icu17q#icp41q" name="bithDate"/>
+      <InputCollectorParameter id="mov2y#mpkg6q#opm14q#icu17q#icp42q" name="email"/>
+      <InputCollectorParameter id="mov2y#mpkg6q#opm14q#icu17q#icp43q" name="lastName"/>
+      <InputCollectorParameter id="mov2y#mpkg6q#opm14q#icu17q#icp44q" name="name"/>
+      <InputCollectorParameter id="mov2y#mpkg6q#opm14q#icu17q#icp45q" name="password"/>
+      <InputCollectorParameter id="mov2y#mpkg6q#opm14q#icu17q#icp46q" name="userName"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit id="mov2y#mpkg6q#opm14q#inn5q" name="&#191;NuevoUser?" gr:x="335" gr:y="120">
+      <KOLink id="mov2y#mpkg6q#opm14q#inn5q#kln35q" name="KOFlow29" to="mov2y#mpkg6q#opm14q#cru5q" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg6q#opm14q#inn5q#oln50q" name="OKFlow41" to="mov2y#mpkg6q#opm14q#mfu11q" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <CreateUnit id="mov2y#mpkg6q#opm14q#cru5q" name="NuevoUser" gr:x="335" gr:y="5" entity="User">
+      <OKLink id="mov2y#mpkg6q#opm14q#cru5q#oln51q" name="OKFlow42" to="mov2y#mpkg6q#opm14q#okcu13q" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg6q#opm14q#cru5q#kln36q" name="KOFlow30" to="mov2y#mpkg6q#opm14q#kocu16q">
+        <LinkParameter id="mov2y#mpkg6q#opm14q#cru5q#kln36q#par163q" name="oid_Mensaje" source="userOIDArray" target="mov2y#mpkg6q#opm14q#kocu16q#ocp5q"/>
+      </KOLink>
+    </CreateUnit>
+    <ModifyUnit id="mov2y#mpkg6q#opm14q#mfu11q" name="EditarUser" gr:x="340" gr:y="220" entity="User" bulk="false">
+      <Selector id="mov2y#mpkg6q#opm14q#mfu11q#su31q" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg6q#opm14q#mfu11q#su31q#kcond19q" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2y#mpkg6q#opm14q#mfu11q#oln52q" name="OKFlow43" to="mov2y#mpkg6q#opm14q#okcu13q" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg6q#opm14q#mfu11q#kln37q" name="KOFlow31" to="mov2y#mpkg6q#opm14q#kocu16q">
+        <LinkParameter id="mov2y#mpkg6q#opm14q#mfu11q#kln37q#par164q" name="oid_Mensaje" source="userOIDArray" target="mov2y#mpkg6q#opm14q#kocu16q#ocp5q"/>
+      </KOLink>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov2y#mpkg6q#opm14q#okcu13q" name="Success" gr:x="630" gr:y="40"/>
+    <KOCollectorUnit id="mov2y#mpkg6q#opm14q#kocu16q" name="Failure" gr:x="630" gr:y="215">
+      <OutputCollectorParameter id="mov2y#mpkg6q#opm14q#kocu16q#ocp5q" name="Mensaje"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

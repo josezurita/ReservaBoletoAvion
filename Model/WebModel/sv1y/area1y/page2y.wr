@@ -1,0 +1,166 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1y#area1y#page2y" name="Vuelos" gr:x="0" gr:y="0" landmark="true">
+  <ContentUnits>
+    <EntryUnit id="sv1y#area1y#page2y#enu2y" name="Selecci&#243;n de vuelo" linkOrder="sv1y#area1y#page2y#enu2y#ln12q sv1y#area1y#page2y#enu2y#ln57q sv1y#area1y#page2y#enu2y#ln58q" gr:x="10" gr:y="170" entity="ent4y" fieldOrder="sv1y#area1y#page2y#enu2y#fld11y sv1y#area1y#page2y#enu2y#sfld3y sv1y#area1y#page2y#enu2y#sfld4y sv1y#area1y#page2y#enu2y#fld20q sv1y#area1y#page2y#enu2y#fld11q sv1y#area1y#page2y#enu2y#fld6q" ajaxEnableExpandedLinks="true">
+      <Field id="sv1y#area1y#page2y#enu2y#fld11y" name="Dia de salida" type="date" modifiable="true" attribute="ent4y#att19y" ajaxEventEnabled="true" ajaxEventLink="sv1y#area1y#page2y#enu2y#ln12q">
+        <VRules>
+          <CompareValidationRule id="sv1y#area1y#page2y#enu2y#fld11y#cmp4q" name="ma&#241;ana" predicate="gt" valueField="sv1y#area1y#page2y#enu2y#fld12q" errorMessage="Seleccione una fecha a partir del d&#237;a de ma&#241;ana"/>
+          <MandatoryValidationRule id="sv1y#area1y#page2y#enu2y#fld11y#mnd2q" name="Mandatory2" errorMessage="Este campo es obligatorio"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv1y#area1y#page2y#enu2y#sfld3y" name="Origen" type="string" role="rel2y#role4y">
+        <VRules>
+          <MandatoryValidationRule id="sv1y#area1y#page2y#enu2y#sfld3y#mnd5q" name="Mandatory5" errorMessage="Este campo es obligatorio"/>
+        </VRules>
+      </SelectionField>
+      <SelectionField id="sv1y#area1y#page2y#enu2y#sfld4y" name="Destino" type="string" role="rel3y#role6y">
+        <VRules>
+          <MandatoryValidationRule id="sv1y#area1y#page2y#enu2y#sfld4y#mnd1q" name="Mandatory1" errorMessage="Este campo es obligatorio"/>
+        </VRules>
+      </SelectionField>
+      <Field id="sv1y#area1y#page2y#enu2y#fld11q" name="N&#250;mero de pasajeros" type="integer" modifiable="true" ajaxEventEnabled="false" ajaxEventType="keyup">
+        <VRules>
+          <TypeValidationRule id="sv1y#area1y#page2y#enu2y#fld11q#tvr1q" name="isInt" type="integer"/>
+          <MandatoryValidationRule id="sv1y#area1y#page2y#enu2y#fld11q#mnd4q" name="Mandatory4" errorMessage="Este campo es obligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv1y#area1y#page2y#enu2y#fld12q" name="Hoy" type="date" modifiable="false" preloaded="true" hidden="true"/>
+      <Link id="sv1y#area1y#page2y#enu2y#ln12q" name="Validar fecha" to="sv1y#area1y#page2y" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-171,1,-216,11" preserveForm="true"/>
+      <Link id="sv1y#area1y#page2y#enu2y#ln57q" name="Buscar" to="sv1y#area1y#page4q#pwu4q" type="normal" validate="true" preserveForm="true">
+        <LinkParameter id="sv1y#area1y#page2y#enu2y#ln57q#par1q" name="Destino_Destino" source="sv1y#area1y#page2y#enu2y#sfld4y" target="sv1y#area1y#page4q#pwu4q#su13q#acond24q"/>
+        <LinkParameter id="sv1y#area1y#page2y#enu2y#ln57q#par2q" name="Dia de salida_Fecha" source="sv1y#area1y#page2y#enu2y#fld11y" target="sv1y#area1y#page4q#pwu4q#su13q#acond22q"/>
+        <LinkParameter id="sv1y#area1y#page2y#enu2y#ln57q#par3q" name="Origen_Origen" source="sv1y#area1y#page2y#enu2y#sfld3y" target="sv1y#area1y#page4q#pwu4q#su13q#acond23q"/>
+        <LinkParameter id="sv1y#area1y#page2y#enu2y#ln57q#par55q" name="N&#250;mero de pasajeros_PASSING" source="sv1y#area1y#page2y#enu2y#fld11q" passing="true"/>
+      </Link>
+      <Link id="sv1y#area1y#page2y#enu2y#ln58q" name="Buscar" to="sv1y#area1y#page5q#pwu5q" type="normal" validate="true" preserveForm="true">
+        <LinkParameter id="sv1y#area1y#page2y#enu2y#ln58q#par4q" name="Destino_Destino" source="sv1y#area1y#page2y#enu2y#sfld4y" target="sv1y#area1y#page5q#pwu5q#su14q#acond28q"/>
+        <LinkParameter id="sv1y#area1y#page2y#enu2y#ln58q#par5q" name="Dia de salida_Fecha" source="sv1y#area1y#page2y#enu2y#fld11y" target="sv1y#area1y#page5q#pwu5q#su14q#acond26q"/>
+        <LinkParameter id="sv1y#area1y#page2y#enu2y#ln58q#par6q" name="Origen_Origen" source="sv1y#area1y#page2y#enu2y#sfld3y" target="sv1y#area1y#page5q#pwu5q#su14q#acond27q"/>
+        <LinkParameter id="sv1y#area1y#page2y#enu2y#ln58q#par23q" name="N&#250;mero de pasajeros_PASSING" source="sv1y#area1y#page2y#enu2y#fld11q" passing="true"/>
+      </Link>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv1y#area1y#page2y#enu2y#fnevr2q" name="Form Not Empty2" errorMessage="El formulario no debe estar vac&#237;o"/>
+      </VRules>
+      <Field id="sv1y#area1y#page2y#enu2y#fld6q" name="Captcha" type="string" modifiable="true">
+        <VRules>
+          <CaptchaValidationRule id="sv1y#area1y#page2y#enu2y#fld6q#captcha2q" name="Captcha2"/>
+        </VRules>
+      </Field>
+      <Field id="sv1y#area1y#page2y#enu2y#fld20q" type="boolean" modifiable="true" name="Ida y vuelta" ajaxEventEnabled="true" ajaxEventLink="sv1y#area1y#page2y#enu2y#ln12q">
+        <VRules>
+          <MandatoryValidationRule id="sv1y#area1y#page2y#enu2y#fld20q#mnd10q" name="Mandatory3" errorMessage="Este campo es obligatorio"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+    <SelectorUnit id="sv1y#area1y#page2y#seu4y" name="Selector Origen" gr:x="130" gr:y="0" entity="ent3y">
+      <Link id="sv1y#area1y#page2y#seu4y#ln6y" name="Flow2" to="sv1y#area1y#page2y#enu2y" type="transport" validate="true">
+        <LinkParameter id="sv1y#area1y#page2y#seu4y#ln6y#par5y" name="nombre_VueloToCiudad  [label]" source="ent3y#att11yArray" target="sv1y#area1y#page2y#enu2y#sfld3y_label"/>
+        <LinkParameter id="sv1y#area1y#page2y#seu4y#ln6y#par6y" name="oid_VueloToCiudad  [output]" source="ent3y#att10yArray" target="sv1y#area1y#page2y#enu2y#sfld3y_output"/>
+      </Link>
+      <Selector id="sv1y#area1y#page2y#seu4y#su2q" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1y#area1y#page2y#seu4y#su2q#acond2q" name="NoEliminado" predicate="neq" booleanOperator="and" implied="false" attributes="ent3y#att12y" value="true"/>
+      </Selector>
+    </SelectorUnit>
+    <SelectorUnit id="sv1y#area1y#page2y#seu5y" name="Selector Destino" gr:x="0" gr:y="0" entity="ent3y">
+      <Link id="sv1y#area1y#page2y#seu5y#ln7y" name="Flow1" to="sv1y#area1y#page2y#enu2y" type="transport" validate="true">
+        <LinkParameter id="sv1y#area1y#page2y#seu5y#ln7y#par7y" name="nombre_VueloToCiudad _2 [label]" source="ent3y#att11yArray" target="sv1y#area1y#page2y#enu2y#sfld4y_label"/>
+        <LinkParameter id="sv1y#area1y#page2y#seu5y#ln7y#par8y" name="oid_VueloToCiudad _2 [output]" source="ent3y#att10yArray" target="sv1y#area1y#page2y#enu2y#sfld4y_output"/>
+      </Link>
+      <Selector id="sv1y#area1y#page2y#seu5y#su1q" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1y#area1y#page2y#seu5y#su1q#acond1q" name="NoEliminado" predicate="neq" booleanOperator="and" implied="false" attributes="ent3y#att12y" value="true"/>
+      </Selector>
+    </SelectorUnit>
+    <TimeUnit gr:x="260" gr:y="15" id="sv1y#area1y#page2y#tmu1q" name="Hoy">
+      <Link id="sv1y#area1y#page2y#tmu1q#ln11q" name="Flow11" to="sv1y#area1y#page2y#enu2y" type="transport" validate="true">
+        <LinkParameter id="sv1y#area1y#page2y#tmu1q#ln11q#par54q" name="Current/Input Date_Hoy" source="currentDate" target="sv1y#area1y#page2y#enu2y#fld12q_slot"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid" layout:style="PureStyle">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1y#area1y#page2y#enu2y">
+          <layout:Link link="sv1y#area1y#page2y#enu2y#ln12q" layout:linkVisibilityConditionVariable="sv1y#area1y#page2y#var1q"/>
+          <layout:Link link="sv1y#area1y#page2y#enu2y#ln57q" layout:linkVisibilityConditionVariable="sv1y#area1y#page2y#var2q" layout:linkVisibilityConditionNegated="true"/>
+          <layout:Link link="sv1y#area1y#page2y#enu2y#ln58q" layout:linkVisibilityConditionVariable="sv1y#area1y#page2y#var2q"/>
+          <layout:Field field="sv1y#area1y#page2y#enu2y#fld11y"/>
+          <layout:Field field="sv1y#area1y#page2y#enu2y#sfld3y"/>
+          <layout:Field field="sv1y#area1y#page2y#enu2y#sfld4y"/>
+          <layout:Field field="sv1y#area1y#page2y#enu2y#fld20q">
+            <layout:LayoutParameter name="boolean-field-rendering" value="checkbox" type="field"/>
+          </layout:Field>
+          <layout:Field field="sv1y#area1y#page2y#enu2y#fld11q"/>
+          <layout:Field field="sv1y#area1y#page2y#enu2y#fld6q"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv1y#area1y#page2y#var1q" name="isHidden" type="boolean" value="true"/>
+  <Variable id="sv1y#area1y#page2y#var2q" name="isIdaYVuelta" type="boolean" unitId="sv1y#area1y#page2y#enu2y" parameter="sv1y#area1y#page2y#enu2y#fld20q"/>
+</Page>

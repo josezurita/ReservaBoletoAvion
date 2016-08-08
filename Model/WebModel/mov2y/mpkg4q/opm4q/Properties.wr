@@ -1,0 +1,22 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov2y#mpkg4q#opm4q" name="Login">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg4q#opm4q#icu5q" gr:x="30" gr:y="150">
+      <OKLink id="mov2y#mpkg4q#opm4q#icu5q#oln14q" name="OKFlow14" to="mov2y#mpkg4q#opm4q#lgu1q" automaticCoupling="false">
+        <LinkParameter id="mov2y#mpkg4q#opm4q#icu5q#oln14q#par7q" name="Password" source="mov2y#mpkg4q#opm4q#icu5q#icp11q" target="mov2y#mpkg4q#opm4q#lgu1q.password"/>
+        <LinkParameter id="mov2y#mpkg4q#opm4q#icu5q#oln14q#par8q" name="Remember Credentials (Persistent Cookie)" source="mov2y#mpkg4q#opm4q#icu5q#icp12q" target="mov2y#mpkg4q#opm4q#lgu1q.rememberCredentials"/>
+        <LinkParameter id="mov2y#mpkg4q#opm4q#icu5q#oln14q#par16q" name="Username" source="mov2y#mpkg4q#opm4q#icu5q#icp13q" target="mov2y#mpkg4q#opm4q#lgu1q.username"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2y#mpkg4q#opm4q#icu5q#icp11q" name="Password"/>
+      <InputCollectorParameter id="mov2y#mpkg4q#opm4q#icu5q#icp12q" name="Remember Credentials (Persistent Cookie)"/>
+      <InputCollectorParameter id="mov2y#mpkg4q#opm4q#icu5q#icp13q" name="Username"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit gr:x="605" gr:y="160" id="mov2y#mpkg4q#opm4q#kocu8q" name="Failure">
+      <OutputCollectorParameter id="mov2y#mpkg4q#opm4q#kocu8q#ocp2q" name="Mensaje de error"/>
+    </KOCollectorUnit>
+    <LoginUnit gr:x="445" gr:y="170" id="mov2y#mpkg4q#opm4q#lgu1q" name="Login">
+      <KOLink id="mov2y#mpkg4q#opm4q#lgu1q#kln18q" name="KOFlow18" to="mov2y#mpkg4q#opm4q#kocu8q">
+        <LinkParameter id="mov2y#mpkg4q#opm4q#lgu1q#kln18q#par25q" name="Error Message_Mensaje de error" source="errorMessage" target="mov2y#mpkg4q#opm4q#kocu8q#ocp2q"/>
+      </KOLink>
+    </LoginUnit>
+  </OperationUnits>
+</OperationModule>

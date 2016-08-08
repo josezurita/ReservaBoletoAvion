@@ -1,0 +1,121 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1y#hym1y#page6y" name="Pais" gr:x="290" gr:y="-10" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit id="mov1y#hym1y#page6y#pwu6y" name="Paises" linkOrder="mov1y#hym1y#page6y#pwu6y#ln21y mov1y#hym1y#page6y#pwu6y#ln22y" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2y" displayAttributes="ent2y#att8y">
+      <Link id="mov1y#hym1y#page6y#pwu6y#ln21y" name="Editar" to="mov1y#hym1y#page6y#enu4y" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="mov1y#hym1y#page6y#pwu6y#ln22y" name="Borrar" to="mov1y#hym1y#miu5y" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym1y#page6y#pwu6y#ln22y#par25y" name="id_pais_pais key" source="data[].ent2y#att7y" target="mov1y#hym1y#miu5y.mov2y#mpkg1y#opm3y#icu3y#icp3y"/>
+      </Link>
+      <Selector id="mov1y#hym1y#page6y#pwu6y#su8y" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1y#hym1y#page6y#pwu6y#su8y#acond3y" name="NoBorrado" predicate="neq" booleanOperator="or" implied="false" attributes="ent2y#att9y" ignoreCase="false" value="true"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit id="mov1y#hym1y#page6y#enu4y" name="Pais" linkOrder="mov1y#hym1y#page6y#enu4y#ln23y mov1y#hym1y#page6y#enu4y#ln24y" gr:x="260" gr:y="10" entity="ent2y" fieldOrder="mov1y#hym1y#page6y#enu4y#fld19y">
+      <Link id="mov1y#hym1y#page6y#enu4y#ln23y" name="Cancelar" to="mov1y#hym1y#page6y" type="normal" automaticCoupling="true" validate="false" gr:bendpoints="-33,-119,87,-165"/>
+      <Field id="mov1y#hym1y#page6y#enu4y#fld19y" name="nombrePais" type="string" modifiable="true" attribute="ent2y#att8y"/>
+      <Link id="mov1y#hym1y#page6y#enu4y#ln24y" name="Guardar" to="mov1y#hym1y#miu7y" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym1y#page6y#enu4y#ln24y#par26y" name="nombrePais_nombrePais" source="mov1y#hym1y#page6y#enu4y#fld19y" target="mov1y#hym1y#miu7y.mov2y#mpkg1y#opm4y#icu4y#icp2y"/>
+        <LinkParameter id="mov1y#hym1y#page6y#enu4y#ln24y#par27y" name="Key [id_pais]_pais key" source="key.ent2y#att7y" target="mov1y#hym1y#miu7y.mov2y#mpkg1y#opm4y#icu4y#icp1y"/>
+      </Link>
+      <VRules>
+        <FormNotEmptyValidationRule id="mov1y#hym1y#page6y#enu4y#fnevr2y" name="NoVacio" errorMessage="El formulario no puede estar vac&#237;o"/>
+      </VRules>
+    </EntryUnit>
+    <PowerIndexUnit id="mov1y#hym1y#page6y#pwu7y" name="Paises Eliminados" linkOrder="mov1y#hym1y#page6y#pwu7y#ln25y" gr:x="200" gr:y="110" sortable="true" checkable="false" useCountQuery="false" entity="ent2y" displayAttributes="ent2y#att8y">
+      <Selector id="mov1y#hym1y#page6y#pwu7y#su9y" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1y#hym1y#page6y#pwu7y#su9y#acond4y" name="Eliminado" predicate="eq" booleanOperator="or" implied="false" attributes="ent2y#att9y" ignoreCase="false" value="true"/>
+      </Selector>
+      <Link id="mov1y#hym1y#page6y#pwu7y#ln25y" name="Restaurar" to="mov1y#hym1y#miu6y" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym1y#page6y#pwu7y#ln25y#par28y" name="id_pais_pais key" source="data[].ent2y#att7y" target="mov1y#hym1y#miu6y.mov2y#mpkg1y#opm5y#icu5y#icp4y"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym1y#page6y#pwu6y">
+          <layout:Link link="mov1y#hym1y#page6y#pwu6y#ln21y"/>
+          <layout:Link link="mov1y#hym1y#page6y#pwu6y#ln22y"/>
+          <layout:Attribute attribute="ent2y#att8y"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym1y#page6y#pwu7y">
+          <layout:Link link="mov1y#hym1y#page6y#pwu7y#ln25y"/>
+          <layout:Attribute attribute="ent2y#att8y"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym1y#page6y#enu4y">
+          <layout:Field field="mov1y#hym1y#page6y#enu4y#fld19y"/>
+          <layout:Link link="mov1y#hym1y#page6y#enu4y#ln23y"/>
+          <layout:Link link="mov1y#hym1y#page6y#enu4y#ln24y"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

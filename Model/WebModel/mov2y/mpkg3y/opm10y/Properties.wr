@@ -1,0 +1,40 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2y#mpkg3y#opm10y" name="CrearCiudad" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg3y#opm10y#icu12y" gr:x="30" gr:y="60">
+      <Link id="mov2y#mpkg3y#opm10y#icu12y#ln34y" name="Flow15" to="mov2y#mpkg3y#opm10y#mfu8y" type="transport" validate="true" gr:bendpoints="179,-126,-211,-1">
+        <LinkParameter id="mov2y#mpkg3y#opm10y#icu12y#ln34y#par59y" name="FALSE_borrado" sourceValue="FALSE" target="mov2y#mpkg3y#opm10y#mfu8y.ent3y#att12y"/>
+        <LinkParameter id="mov2y#mpkg3y#opm10y#icu12y#ln34y#par60y" name="ciudad key_KeyCondition3 [id_ciudad]" source="mov2y#mpkg3y#opm10y#icu12y#icp10y" target="mov2y#mpkg3y#opm10y#mfu8y#su17y#kcond10y.ent3y#att10y"/>
+        <LinkParameter id="mov2y#mpkg3y#opm10y#icu12y#ln34y#par61y" name="id_pais_Pais.id_pais(Ciudad ToPais)" source="mov2y#mpkg3y#opm10y#icu12y#icp13y" target="mov2y#mpkg3y#opm10y#mfu8y.rel1y#role2y.ent2y#att7y"/>
+        <LinkParameter id="mov2y#mpkg3y#opm10y#icu12y#ln34y#par65y" name="nombreCiudad_nombre" source="mov2y#mpkg3y#opm10y#icu12y#icp11y" target="mov2y#mpkg3y#opm10y#mfu8y.ent3y#att11y"/>
+      </Link>
+      <Link id="mov2y#mpkg3y#opm10y#icu12y#ln35y" name="Flow16" to="mov2y#mpkg3y#opm10y#cru3y" type="transport" validate="true" gr:bendpoints="177,110,-208,10">
+        <LinkParameter id="mov2y#mpkg3y#opm10y#icu12y#ln35y#par62y" name="FALSE_borrado" sourceValue="FALSE" target="mov2y#mpkg3y#opm10y#cru3y.ent3y#att12y"/>
+        <LinkParameter id="mov2y#mpkg3y#opm10y#icu12y#ln35y#par63y" name="nombreCiudad_nombre" source="mov2y#mpkg3y#opm10y#icu12y#icp11y" target="mov2y#mpkg3y#opm10y#cru3y.ent3y#att11y"/>
+        <LinkParameter id="mov2y#mpkg3y#opm10y#icu12y#ln35y#par64y" name="id_pais_Pais.id_pais(Ciudad ToPais)" source="mov2y#mpkg3y#opm10y#icu12y#icp13y" target="mov2y#mpkg3y#opm10y#cru3y.rel1y#role2y.ent2y#att7y"/>
+      </Link>
+      <InputCollectorParameter id="mov2y#mpkg3y#opm10y#icu12y#icp10y" name="ciudad key"/>
+      <InputCollectorParameter id="mov2y#mpkg3y#opm10y#icu12y#icp11y" name="nombreCiudad"/>
+      <OKLink id="mov2y#mpkg3y#opm10y#icu12y#oln30y" name="OKFlow3" to="mov2y#mpkg3y#opm10y#inn3y">
+        <LinkParameter id="mov2y#mpkg3y#opm10y#icu12y#oln30y#par52y" name="pais key_Input" source="mov2y#mpkg3y#opm10y#icu12y#icp10y" target="mov2y#mpkg3y#opm10y#inn3y.isnotnull"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2y#mpkg3y#opm10y#icu12y#icp13y" name="id_pais"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit id="mov2y#mpkg3y#opm10y#inn3y" name="&#191;Ciudad existe?" gr:x="360" gr:y="80" emptyStringAsNull="true">
+      <OKLink id="mov2y#mpkg3y#opm10y#inn3y#oln31y" name="OKFlow4" to="mov2y#mpkg3y#opm10y#mfu8y" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg3y#opm10y#inn3y#kln21y" name="KOFlow3" to="mov2y#mpkg3y#opm10y#cru3y" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <CreateUnit id="mov2y#mpkg3y#opm10y#cru3y" name="Crear ciudad" gr:x="495" gr:y="190" entity="ent3y">
+      <KOLink id="mov2y#mpkg3y#opm10y#cru3y#kln22y" name="KOFlow4" to="mov2y#mpkg3y#opm10y#kocu8y" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg3y#opm10y#cru3y#oln32y" name="OKFlow6" to="mov2y#mpkg3y#opm10y#okcu8y" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit id="mov2y#mpkg3y#opm10y#mfu8y" name="Actualizar ciudad" gr:x="480" gr:y="-65" entity="ent3y">
+      <Selector id="mov2y#mpkg3y#opm10y#mfu8y#su17y" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg3y#opm10y#mfu8y#su17y#kcond10y" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov2y#mpkg3y#opm10y#mfu8y#kln23y" name="KOFlow5" to="mov2y#mpkg3y#opm10y#kocu8y" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg3y#opm10y#mfu8y#oln33y" name="OKFlow5" to="mov2y#mpkg3y#opm10y#okcu8y" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov2y#mpkg3y#opm10y#okcu8y" name="&#201;xito" gr:x="720" gr:y="-55"/>
+    <KOCollectorUnit id="mov2y#mpkg3y#opm10y#kocu8y" name="Fracaso" gr:x="720" gr:y="190"/>
+  </OperationUnits>
+</OperationModule>

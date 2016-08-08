@@ -1,0 +1,13 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="55" id="mov2y#mpkg4q#opm11q" name="Logout">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg4q#opm11q#icu12q" name="Input Collector" gr:x="30" gr:y="60">
+      <OKLink id="mov2y#mpkg4q#opm11q#icu12q#oln28q" name="OKFlow28" to="mov2y#mpkg4q#opm11q#lou1q" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <LogoutUnit gr:x="310" gr:y="60" id="mov2y#mpkg4q#opm11q#lou1q" name="Logout" siteView="sv2q">
+      <KOLink id="mov2y#mpkg4q#opm11q#lou1q#kln20q" name="KOFlow20" to="mov2y#mpkg4q#opm11q#kocu9q"/>
+    </LogoutUnit>
+    <KOCollectorUnit gr:x="475" gr:y="60" id="mov2y#mpkg4q#opm11q#kocu9q" name="Failure">
+      <OutputCollectorParameter id="mov2y#mpkg4q#opm11q#kocu9q#ocp3q" name="Mensaje de error"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

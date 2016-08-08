@@ -1,0 +1,173 @@
+<DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
+  <Entity id="User" name="User" duration="persistent" gr:x="560" gr:y="-110" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att28y User#att29y User#att30y User#att34y" db:database="db2y" db:table="user">
+    <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="userName" id="userName" type="string" db:column="username" key="false"/>
+    <Attribute name="password" id="password" type="password" db:column="password" key="false"/>
+    <Attribute name="email" id="email" type="string" db:column="email" key="false"/>
+    <Attribute id="User#att30y" name="borrado" type="boolean" db:column="borrado" key="false"/>
+    <Attribute id="User#att29y" name="lastName" type="string" db:column="lastname" key="false"/>
+    <Attribute id="User#att28y" name="name" type="string" db:column="name" key="false"/>
+    <Attribute id="User#att34y" name="bithDate" type="date" db:column="bithdate"/>
+  </Entity>
+  <Entity id="Group" name="Group" duration="persistent" gr:x="270" gr:y="-50" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2y" db:table="group">
+    <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
+  </Entity>
+  <Entity id="Module" name="Module" duration="persistent" gr:x="10" gr:y="-60" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2y" db:table="module">
+    <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
+    <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
+  </Entity>
+  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db2y" db:table="user_group">
+    <RelationshipRole1 id="User2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Group2User" name="users" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db2y" db:table="user">
+    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db2y" db:table="group">
+    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
+      <db:JoinColumn attribute="groupOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db2y" db:table="group_module">
+    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="50" gr:y="325" id="ent2y" name="Pais" duration="persistent" attributeOrder="ent2y#att7y ent2y#att8y ent2y#att9y" db:database="db2y" db:table="pais">
+    <Attribute id="ent2y#att7y" key="true" name="id_pais" type="integer" db:column="id_pais"/>
+    <Attribute id="ent2y#att9y" name="borrado" type="boolean" db:column="borrado"/>
+    <Attribute id="ent2y#att8y" name="nombrePais" type="string" db:column="nombrepais"/>
+  </Entity>
+  <Entity gr:x="280" gr:y="315" id="ent3y" name="Ciudad " duration="persistent" attributeOrder="ent3y#att10y ent3y#att11y ent3y#att12y ent3y#att2y" db:database="db2y" db:table="ciudad">
+    <Attribute id="ent3y#att10y" key="true" name="id_ciudad" type="integer" db:column="oid"/>
+    <Attribute id="ent3y#att12y" name="borrado" type="boolean" db:column="borrado" key="false"/>
+    <Attribute id="ent3y#att11y" name="nombre" type="string" db:column="nombre" key="false"/>
+    <Attribute id="ent3y#att2y" name="pais" type="string" derivationQuery="complexImported::Self.rel1y#role2y(as Var1).ent2y#att8y" db:table="ciudad_pais_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent3y#att10y" name="oid"/>
+    </Attribute>
+  </Entity>
+  <Relationship id="rel1y" name="Pais_Ciudad " sourceEntity="ent2y" targetEntity="ent3y" db:database="db2y" db:table="ciudad">
+    <RelationshipRole1 id="rel1y#role1y" name="PaisToCiudad " maxCard="N">
+      <db:JoinColumn attribute="ent2y#att7y" name="pais_id_pais"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1y#role2y" name="Ciudad ToPais" maxCard="1">
+      <db:JoinColumn attribute="ent3y#att10y" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="560" gr:y="255" id="ent4y" name="Vuelo" duration="persistent" attributeOrder="ent4y#att13y ent4y#att14y ent4y#att15y ent4y#att16y ent4y#att19y ent4y#att20y ent4y#att21y ent4y#att32y ent4y#att33y" db:database="db2y" db:table="vuelo">
+    <Attribute id="ent4y#att13y" key="true" name="id_vuelo" type="integer" db:column="id_vuelo"/>
+    <Attribute id="ent4y#att21y" name="borrado " type="boolean" db:column="borrado" key="false"/>
+    <Attribute id="ent4y#att20y" name="diaLlegada " type="date" db:column="diallegada" key="false"/>
+    <Attribute id="ent4y#att19y" name="diaSalida " type="date" db:column="diasalida" key="false"/>
+    <Attribute id="ent4y#att16y" name="horaLlegada " type="time" db:column="horallegada" key="false"/>
+    <Attribute id="ent4y#att15y" name="horaSalida " type="time" db:column="horasalida" key="false"/>
+    <Attribute id="ent4y#att14y" name="asientosLibres" type="integer" key="false" derivationQuery="calculated::count(Self.rel9y#role17y(as Var1)) where Var1.ent5y#att24y = true" db:table="vuelo_asientoslibres_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent4y#att13y" name="id_vuelo"/>
+    </Attribute>
+    <Attribute id="ent4y#att32y" name="origen" type="string" derivationQuery="complexImported::Self.rel2y#role4y(as Var1).ent3y#att11y" db:table="vuelo_origen_view" db:column="der_attr" storageType="file" key="false">
+      <db:JoinColumn attribute="ent4y#att13y" name="id_vuelo"/>
+    </Attribute>
+    <Attribute id="ent4y#att33y" name="destino" type="string" derivationQuery="complexImported::Self.rel3y#role6y(as Var1).ent3y#att11y" db:table="vuelo_destino_view" db:column="der_attr" storageType="file" key="false">
+      <db:JoinColumn attribute="ent4y#att13y" name="id_vuelo"/>
+    </Attribute>
+  </Entity>
+  <Relationship id="rel2y" name="Origen" sourceEntity="ent3y" targetEntity="ent4y" db:database="db2y" db:table="vuelo">
+    <RelationshipRole1 id="rel2y#role3y" name="CiudadToVuelo" maxCard="N">
+      <db:JoinColumn attribute="ent3y#att10y" name="ciudad_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2y#role4y" name="id_origen" maxCard="1">
+      <db:JoinColumn attribute="ent4y#att13y" name="id_vuelo"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel3y" name="Destino" sourceEntity="ent3y" targetEntity="ent4y" gr:bendpoints="127,56,-148,21" db:database="db2y" db:table="vuelo">
+    <RelationshipRole1 id="rel3y#role5y" name="CiudadToVuelo_2" maxCard="N">
+      <db:JoinColumn attribute="ent3y#att10y" name="ciudad_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3y#role6y" name="id_destino" maxCard="1">
+      <db:JoinColumn attribute="ent4y#att13y" name="id_vuelo"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="90" gr:y="115" id="ent5y" name="Asiento" duration="persistent" attributeOrder="ent5y#att22y ent5y#att23y ent5y#att24y ent5y#att25y" db:database="db2y" db:table="asiento">
+    <Attribute id="ent5y#att22y" key="true" name="id_asiento" type="integer" db:column="id_asiento"/>
+    <Attribute id="ent5y#att25y" name="borrado" type="boolean" db:column="borrado" key="false"/>
+    <Attribute id="ent5y#att24y" name="disponible" type="boolean" db:column="estado" key="false"/>
+    <Attribute id="ent5y#att23y" name="tipo" type="string" db:column="tipo" key="false"/>
+  </Entity>
+  <Entity gr:x="565" gr:y="135" id="ent6y" name="Reserva" duration="persistent" attributeOrder="ent6y#att26y ent6y#att27y" db:database="db2y" db:table="reserva">
+    <Attribute id="ent6y#att26y" key="true" name="id_reserva" type="integer" db:column="id_reserva"/>
+    <Attribute id="ent6y#att27y" name="borrado" type="boolean" db:column="borrado"/>
+  </Entity>
+  <Relationship id="rel4y" name="Asiento_Reserva" sourceEntity="ent5y" targetEntity="ent6y" db:database="db2y" db:table="asiento_reserva">
+    <RelationshipRole1 id="rel4y#role7y" name="AsientoToReserva" maxCard="N">
+      <db:JoinColumn attribute="ent5y#att22y" name="asiento_id_asiento"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4y#role8y" name="ReservaToAsiento" maxCard="N">
+      <db:JoinColumn attribute="ent6y#att26y" name="reserva_id_reserva"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel6y" name="Vuelo_Reserva_Ida" sourceEntity="ent4y" targetEntity="ent6y" db:database="db2y" db:table="reserva">
+    <RelationshipRole1 id="rel6y#role11y" name="VueloToReservaIda" maxCard="N">
+      <db:JoinColumn attribute="ent4y#att13y" name="vuelo_id_vuelo"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6y#role12y" name="ReservaToVueloIda" maxCard="1">
+      <db:JoinColumn attribute="ent6y#att26y" name="id_reserva"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel8y" name="User_Reserva" sourceEntity="User" targetEntity="ent6y" db:database="db2y" db:table="reserva">
+    <RelationshipRole1 id="rel8y#role15y" name="UserToReserva" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8y#role16y" name="ReservaToUser" maxCard="1">
+      <db:JoinColumn attribute="ent6y#att26y" name="id_reserva"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel9y" name="Vuelo_Asiento" sourceEntity="ent4y" targetEntity="ent5y" db:database="db2y" db:table="asiento">
+    <RelationshipRole1 id="rel9y#role17y" name="VueloToAsiento" maxCard="N">
+      <db:JoinColumn attribute="ent4y#att13y" name="vuelo_id_vuelo"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9y#role18y" name="AsientoToVuelo" maxCard="1">
+      <db:JoinColumn attribute="ent5y#att22y" name="id_asiento"/>
+    </RelationshipRole2>
+  </Relationship>
+  <db:Database id="db2y" name="freeapp28" url="jdbc:mysql://52.31.221.168:3306/freeapp28" type="MySQL (InnoDB)" username="freeapp28" password="RDg2Njg4QTM=" cryptedPassword="true"/>
+  <Entity gr:x="825" gr:y="105" id="ent1q" name="Pasajero" duration="persistent" attributeOrder="ent1q#att1q ent1q#att2q ent1q#att3q ent1q#att4q ent1q#att5q" db:database="db2y" db:table="pasajero">
+    <Attribute id="ent1q#att1q" key="true" name="id_pasajero" type="integer" db:column="id_pasajero"/>
+    <Attribute id="ent1q#att3q" name="emailPasajero" type="string" key="false" db:column="emailpasajero"/>
+    <Attribute id="ent1q#att2q" name="nombrePasajero" type="string" key="false" db:column="nombrepasajero"/>
+    <Attribute id="ent1q#att4q" name="fechaNacimiento" type="date" key="false" db:column="fechanacimiento"/>
+    <Attribute id="ent1q#att5q" name="cedula" type="string" db:column="cedula"/>
+  </Entity>
+  <Relationship id="rel1q" name="Reserva_Pasajero" sourceEntity="ent6y" targetEntity="ent1q" db:database="db2y" db:table="pasajero">
+    <RelationshipRole1 id="rel1q#role1q" name="ReservaToPasajero" maxCard="N">
+      <db:JoinColumn attribute="ent6y#att26y" name="reserva_id_reserva"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1q#role2q" name="PasajeroToReserva" maxCard="1">
+      <db:JoinColumn attribute="ent1q#att1q" name="id_pasajero"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel2q" name="Reserva_Vuelo_Vuelta" sourceEntity="ent6y" targetEntity="ent4y" gr:bendpoints="-15,59,-15,-131" db:database="db2y" db:table="reserva">
+    <RelationshipRole1 id="rel2q#role3q" name="ReservaToVueloVuelta" maxCard="1">
+      <db:JoinColumn attribute="ent6y#att26y" name="id_reserva"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2q#role4q" name="VueloToReservaVuelta" maxCard="N">
+      <db:JoinColumn attribute="ent4y#att13y" name="vuelo_id_vuelo_2"/>
+    </RelationshipRole2>
+  </Relationship>
+</DataModel>

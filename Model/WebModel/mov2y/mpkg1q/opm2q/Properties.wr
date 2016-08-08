@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2y#mpkg1q#opm2q" name="RestaurarVuelo" gr:x="0" gr:y="110">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg1q#opm2q#icu3q" gr:x="35" gr:y="175">
+      <InputCollectorParameter id="mov2y#mpkg1q#opm2q#icu3q#icp4q" name="id_vuelo"/>
+      <OKLink id="mov2y#mpkg1q#opm2q#icu3q#oln9q" name="OKFlow7" to="mov2y#mpkg1q#opm2q#mfu2q">
+        <LinkParameter id="mov2y#mpkg1q#opm2q#icu3q#oln9q#par50q" name="FALSE_borrado " sourceValue="false" target="mov2y#mpkg1q#opm2q#mfu2q.ent4y#att21y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm2q#icu3q#oln9q#par51q" name="id_vuelo_KeyCondition4 [id_vuelo]" source="mov2y#mpkg1q#opm2q#icu3q#icp4q" target="mov2y#mpkg1q#opm2q#mfu2q#su8q#kcond2q.ent4y#att13y"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2y#mpkg1q#opm2q#okcu2q" name="&#201;xito" gr:x="685" gr:y="70"/>
+    <KOCollectorUnit id="mov2y#mpkg1q#opm2q#kocu2q" name="Fracaso" gr:x="685" gr:y="245"/>
+    <ModifyUnit id="mov2y#mpkg1q#opm2q#mfu2q" name="Restaurar vuelo" gr:x="405" gr:y="165" entity="ent4y">
+      <Selector id="mov2y#mpkg1q#opm2q#mfu2q#su8q" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg1q#opm2q#mfu2q#su8q#kcond2q" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2y#mpkg1q#opm2q#mfu2q#oln10q" name="OKFlow8" to="mov2y#mpkg1q#opm2q#okcu2q" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg1q#opm2q#mfu2q#kln7q" name="KOFlow6" to="mov2y#mpkg1q#opm2q#kocu2q" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="55" id="mov2y#mpkg5q#opm13q" name="EliminarGrupo">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg5q#opm13q#icu15q" gr:x="30" gr:y="120">
+      <OKLink id="mov2y#mpkg5q#opm13q#icu15q#oln44q" name="OKFlow44" to="mov2y#mpkg5q#opm13q#dlu1q" automaticCoupling="false">
+        <LinkParameter id="mov2y#mpkg5q#opm13q#icu15q#oln44q#par125q" name="KeyCondition18 [oid]" source="mov2y#mpkg5q#opm13q#icu15q#icp26q" target="mov2y#mpkg5q#opm13q#dlu1q#su29q#kcond18q.groupOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2y#mpkg5q#opm13q#icu15q#icp26q" name="KeyCondition18 [oid]"/>
+    </InputCollectorUnit>
+    <DeleteUnit gr:x="320" gr:y="110" id="mov2y#mpkg5q#opm13q#dlu1q" name="DeleteGroup" entity="Group">
+      <Selector id="mov2y#mpkg5q#opm13q#dlu1q#su29q" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg5q#opm13q#dlu1q#su29q#kcond18q" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2y#mpkg5q#opm13q#dlu1q#oln45q" name="OKFlow45" to="mov2y#mpkg5q#opm13q#okcu12q" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg5q#opm13q#dlu1q#kln32q" name="KOFlow32" to="mov2y#mpkg5q#opm13q#kocu14q" automaticCoupling="true"/>
+    </DeleteUnit>
+    <KOCollectorUnit gr:x="480" gr:y="175" id="mov2y#mpkg5q#opm13q#kocu14q" name="KO Port14"/>
+    <OKCollectorUnit gr:x="480" gr:y="85" id="mov2y#mpkg5q#opm13q#okcu12q" name="OK Port12"/>
+  </OperationUnits>
+</OperationModule>

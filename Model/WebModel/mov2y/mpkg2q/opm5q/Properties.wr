@@ -1,0 +1,65 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2y#mpkg2q#opm5q" name="CrearReserva" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg2q#opm5q#icu6q" gr:x="30" gr:y="35">
+      <Link id="mov2y#mpkg2q#opm5q#icu6q#ln1q" name="Flow15" to="mov2y#mpkg2q#opm5q#mfu4q" type="transport" validate="true" gr:bendpoints="179,-126,-211,-1">
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#ln1q#par61q" name="KeyCondition3 [id_reserva]" source="mov2y#mpkg2q#opm5q#icu6q#icp20q" target="mov2y#mpkg2q#opm5q#mfu4q#su10q#kcond6q.ent6y#att26y"/>
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#ln1q#par62q" name="User.oid(ReservaToUser)" source="mov2y#mpkg2q#opm5q#icu6q#icp21q" target="mov2y#mpkg2q#opm5q#mfu4q.rel8y#role16y.userOID"/>
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#ln1q#par63q" name="Vuelo.id_vuelo(ReservaToVuelo)" source="mov2y#mpkg2q#opm5q#icu6q#icp22q" target="mov2y#mpkg2q#opm5q#mfu4q.rel6y#role12y.ent4y#att13y"/>
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#ln1q#par64q" name="false_borrado" sourceValue="FALSE" target="mov2y#mpkg2q#opm5q#mfu4q.ent6y#att27y"/>
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#ln1q#par14q" name="idVueloVuelta_Vuelo.id_vuelo(ReservaToVueloVuelta)" source="mov2y#mpkg2q#opm5q#icu6q#icp10q" target="mov2y#mpkg2q#opm5q#mfu4q.rel2q#role3q.ent4y#att13y"/>
+      </Link>
+      <Link id="mov2y#mpkg2q#opm5q#icu6q#ln13q" name="Flow16" to="mov2y#mpkg2q#opm5q#cru2q" type="transport" validate="true" gr:bendpoints="177,110,-208,10">
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#ln13q#par66q" name="false_borrado" sourceValue="FALSE" target="mov2y#mpkg2q#opm5q#cru2q.ent6y#att27y"/>
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#ln13q#par69q" name="idVuelo_Vuelo.id_vuelo(ReservaToVuelo)" source="mov2y#mpkg2q#opm5q#icu6q#icp22q" target="mov2y#mpkg2q#opm5q#cru2q.rel6y#role12y.ent4y#att13y"/>
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#ln13q#par9q" name="idVueloVuelta_Vuelo.id_vuelo(ReservaToVueloVuelta)" source="mov2y#mpkg2q#opm5q#icu6q#icp10q" target="mov2y#mpkg2q#opm5q#cru2q.rel2q#role3q.ent4y#att13y"/>
+      </Link>
+      <OKLink id="mov2y#mpkg2q#opm5q#icu6q#oln16q" name="OKFlow3" to="mov2y#mpkg2q#opm5q#inn2q">
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#oln16q#par56q" name="pais key_Input" source="mov2y#mpkg2q#opm5q#icu6q#icp20q" target="mov2y#mpkg2q#opm5q#inn2q.isnotnull"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2y#mpkg2q#opm5q#icu6q#icp20q" name="idReserva"/>
+      <InputCollectorParameter id="mov2y#mpkg2q#opm5q#icu6q#icp21q" name="user"/>
+      <InputCollectorParameter id="mov2y#mpkg2q#opm5q#icu6q#icp22q" name="idVueloIda"/>
+      <InputCollectorParameter id="mov2y#mpkg2q#opm5q#icu6q#icp24q" name="numeroPasajeros"/>
+      <Link id="mov2y#mpkg2q#opm5q#icu6q#ln15q" name="Flow15" to="mov2y#mpkg2q#opm5q#lpu1q" type="transport" validate="true" gr:bendpoints="261,40,-154,55">
+        <LinkParameter id="mov2y#mpkg2q#opm5q#icu6q#ln15q#par70q" name="numeroPasajeros_Iteration Count" source="mov2y#mpkg2q#opm5q#icu6q#icp24q" target="mov2y#mpkg2q#opm5q#lpu1q.iterationCount"/>
+      </Link>
+      <InputCollectorParameter id="mov2y#mpkg2q#opm5q#icu6q#icp10q" name="idVueloVuelta"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit id="mov2y#mpkg2q#opm5q#inn2q" name="&#191;Reserva existe?" gr:x="360" gr:y="25" emptyStringAsNull="true">
+      <OKLink id="mov2y#mpkg2q#opm5q#inn2q#oln17q" name="OKFlow4" to="mov2y#mpkg2q#opm5q#mfu4q" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg2q#opm5q#inn2q#kln9q" name="KOFlow3" to="mov2y#mpkg2q#opm5q#cru2q" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <CreateUnit id="mov2y#mpkg2q#opm5q#cru2q" name="Crear reserva" gr:x="310" gr:y="200" entity="ent6y" bulk="false">
+      <KOLink id="mov2y#mpkg2q#opm5q#cru2q#kln10q" name="KOFlow4" to="mov2y#mpkg2q#opm5q#kocu4q" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg2q#opm5q#cru2q#oln18q" name="OKFlow6" to="mov2y#mpkg2q#opm5q#lpu1q" automaticCoupling="true"/>
+      <Link id="mov2y#mpkg2q#opm5q#cru2q#ln16q" name="Flow16" to="mov2y#mpkg2q#opm5q#cru3q" type="transport" validate="true">
+        <LinkParameter id="mov2y#mpkg2q#opm5q#cru2q#ln16q#par77q" name="id_reserva_Reserva.id_reserva(PasajeroToReserva)" source="ent6y#att26yArray" target="mov2y#mpkg2q#opm5q#cru3q.rel1q#role2q.ent6y#att26y"/>
+      </Link>
+      <Link id="mov2y#mpkg2q#opm5q#cru2q#ln21q" name="Flow21" to="mov2y#mpkg2q#opm5q#okcu6q" type="transport" validate="true">
+        <LinkParameter id="mov2y#mpkg2q#opm5q#cru2q#ln21q#par76q" name="id_reserva_idReserva" source="ent6y#att26yArray" target="mov2y#mpkg2q#opm5q#okcu6q#ocp1q"/>
+      </Link>
+    </CreateUnit>
+    <ModifyUnit id="mov2y#mpkg2q#opm5q#mfu4q" name="Actualizar reserva" gr:x="495" gr:y="-90" entity="ent6y">
+      <Selector id="mov2y#mpkg2q#opm5q#mfu4q#su10q" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg2q#opm5q#mfu4q#su10q#kcond6q" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov2y#mpkg2q#opm5q#mfu4q#kln11q" name="KOFlow5" to="mov2y#mpkg2q#opm5q#kocu4q" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg2q#opm5q#mfu4q#oln19q" name="OKFlow5" to="mov2y#mpkg2q#opm5q#okcu6q">
+        <LinkParameter id="mov2y#mpkg2q#opm5q#mfu4q#oln19q#par75q" name="id_reserva_idReserva" source="ent6y#att26yArray" target="mov2y#mpkg2q#opm5q#okcu6q#ocp1q"/>
+      </OKLink>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov2y#mpkg2q#opm5q#okcu6q" name="&#201;xito" gr:x="820" gr:y="-80">
+      <OutputCollectorParameter id="mov2y#mpkg2q#opm5q#okcu6q#ocp1q" name="idReserva"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov2y#mpkg2q#opm5q#kocu4q" name="Fracaso" gr:x="820" gr:y="170"/>
+    <LoopUnit gr:x="505" gr:y="55" id="mov2y#mpkg2q#opm5q#lpu1q" name="contarPasajeros">
+      <OKLink id="mov2y#mpkg2q#opm5q#lpu1q#oln24q" name="OKFlow24" to="mov2y#mpkg2q#opm5q#cru3q" automaticCoupling="true" gr:bendpoints="-73,15,72,15" code="next"/>
+      <OKLink id="mov2y#mpkg2q#opm5q#lpu1q#oln25q" name="OKFlow25" to="mov2y#mpkg2q#opm5q#okcu6q" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <CreateUnit gr:x="525" gr:y="225" id="mov2y#mpkg2q#opm5q#cru3q" name="Crear pasajeros" entity="ent1q">
+      <OKLink id="mov2y#mpkg2q#opm5q#cru3q#oln26q" name="OKFlow26" to="mov2y#mpkg2q#opm5q#lpu1q" automaticCoupling="true" gr:bendpoints="13,-94,33,86"/>
+      <KOLink id="mov2y#mpkg2q#opm5q#cru3q#kln14q" name="KOFlow14" to="mov2y#mpkg2q#opm5q#kocu7q" automaticCoupling="true"/>
+    </CreateUnit>
+    <KOCollectorUnit gr:x="820" gr:y="285" id="mov2y#mpkg2q#opm5q#kocu7q" name="FracasoEnPasajeros"/>
+  </OperationUnits>
+</OperationModule>

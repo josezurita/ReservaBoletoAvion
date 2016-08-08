@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2y#mpkg3y#opm11y" name="RestaurarCiudad" gr:x="0" gr:y="110">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg3y#opm11y#icu13y" gr:x="35" gr:y="175">
+      <InputCollectorParameter id="mov2y#mpkg3y#opm11y#icu13y#icp12y" name="ciudad key"/>
+      <OKLink id="mov2y#mpkg3y#opm11y#icu13y#oln34y" name="OKFlow7" to="mov2y#mpkg3y#opm11y#mfu9y">
+        <LinkParameter id="mov2y#mpkg3y#opm11y#icu13y#oln34y#par57y" name="FALSE_borrado" sourceValue="FALSE" target="mov2y#mpkg3y#opm11y#mfu9y.ent3y#att12y"/>
+        <LinkParameter id="mov2y#mpkg3y#opm11y#icu13y#oln34y#par58y" name="ciudad key_KeyCondition4 [id_ciudad]" source="mov2y#mpkg3y#opm11y#icu13y#icp12y" target="mov2y#mpkg3y#opm11y#mfu9y#su18y#kcond11y.ent3y#att10y"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2y#mpkg3y#opm11y#okcu9y" name="&#201;xito" gr:x="685" gr:y="70"/>
+    <KOCollectorUnit id="mov2y#mpkg3y#opm11y#kocu9y" name="Fracaso" gr:x="685" gr:y="245"/>
+    <ModifyUnit id="mov2y#mpkg3y#opm11y#mfu9y" name="Restaurar ciudad" gr:x="405" gr:y="165" entity="ent3y">
+      <Selector id="mov2y#mpkg3y#opm11y#mfu9y#su18y" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg3y#opm11y#mfu9y#su18y#kcond11y" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2y#mpkg3y#opm11y#mfu9y#oln35y" name="OKFlow8" to="mov2y#mpkg3y#opm11y#okcu9y" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg3y#opm11y#mfu9y#kln24y" name="KOFlow6" to="mov2y#mpkg3y#opm11y#kocu9y" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

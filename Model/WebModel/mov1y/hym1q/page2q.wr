@@ -1,0 +1,166 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1y#hym1q#page2q" name="Vuelo" landmark="true" gr:x="315" gr:y="-145">
+  <ContentUnits>
+    <PowerIndexUnit id="mov1y#hym1q#page2q#pwu1q" name="Vuelos" linkOrder="mov1y#hym1q#page2q#pwu1q#ln2q mov1y#hym1q#page2q#pwu1q#ln3q" gr:x="0" gr:y="140" sortable="true" checkable="false" useCountQuery="false" entity="ent4y" displayAttributes="ent4y#att32y ent4y#att33y ent4y#att19y ent4y#att20y ent4y#att14y">
+      <Link id="mov1y#hym1q#page2q#pwu1q#ln2q" name="Editar" to="mov1y#hym1q#page2q#enu2q" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="mov1y#hym1q#page2q#pwu1q#ln3q" name="Borrar" to="mov1y#hym1q#miu2q" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym1q#page2q#pwu1q#ln3q#par52q" name="id_vuelo_id_vuelo" source="data[].ent4y#att13y" target="mov1y#hym1q#miu2q.mov2y#mpkg1q#opm3q#icu4q#icp5q"/>
+      </Link>
+      <Selector id="mov1y#hym1q#page2q#pwu1q#su3q" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1y#hym1q#page2q#pwu1q#su3q#acond3q" name="NoBorrado" predicate="neq" booleanOperator="and" implied="false" ignoreCase="false" value="true" attributes="ent4y#att21y"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit id="mov1y#hym1q#page2q#enu2q" name="Vuelo" linkOrder="mov1y#hym1q#page2q#enu2q#ln4q mov1y#hym1q#page2q#enu2q#ln5q" gr:x="240" gr:y="150" entity="ent4y" fieldOrder="mov1y#hym1q#page2q#enu2q#sfld2q mov1y#hym1q#page2q#enu2q#sfld3q mov1y#hym1q#page2q#enu2q#fld9q mov1y#hym1q#page2q#enu2q#fld7q mov1y#hym1q#page2q#enu2q#fld10q mov1y#hym1q#page2q#enu2q#fld8q">
+      <Link id="mov1y#hym1q#page2q#enu2q#ln4q" name="Cancelar" to="mov1y#hym1q#page2q" type="normal" automaticCoupling="true" validate="false" gr:bendpoints="-2,-104,78,-94"/>
+      <Link id="mov1y#hym1q#page2q#enu2q#ln5q" name="Guardar" to="mov1y#hym1q#miu4q" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym1q#page2q#enu2q#ln5q#par41q" name="diaLlegada _diaLlegada" source="mov1y#hym1q#page2q#enu2q#fld10q" target="mov1y#hym1q#miu4q.mov2y#mpkg1q#opm1q#icu2q#icp7q"/>
+        <LinkParameter id="mov1y#hym1q#page2q#enu2q#ln5q#par42q" name="diaSalida _diaSalida" source="mov1y#hym1q#page2q#enu2q#fld9q" target="mov1y#hym1q#miu4q.mov2y#mpkg1q#opm1q#icu2q#icp2q"/>
+        <LinkParameter id="mov1y#hym1q#page2q#enu2q#ln5q#par43q" name="horaLlegada _horaLlegada" source="mov1y#hym1q#page2q#enu2q#fld8q" target="mov1y#hym1q#miu4q.mov2y#mpkg1q#opm1q#icu2q#icp9q"/>
+        <LinkParameter id="mov1y#hym1q#page2q#enu2q#ln5q#par44q" name="horaSalida _horaSalida" source="mov1y#hym1q#page2q#enu2q#fld7q" target="mov1y#hym1q#miu4q.mov2y#mpkg1q#opm1q#icu2q#icp8q"/>
+        <LinkParameter id="mov1y#hym1q#page2q#enu2q#ln5q#par45q" name="Destino_id_destino" source="mov1y#hym1q#page2q#enu2q#sfld3q" target="mov1y#hym1q#miu4q.mov2y#mpkg1q#opm1q#icu2q#icp6q"/>
+        <LinkParameter id="mov1y#hym1q#page2q#enu2q#ln5q#par46q" name="Origen_id_origen" source="mov1y#hym1q#page2q#enu2q#sfld2q" target="mov1y#hym1q#miu4q.mov2y#mpkg1q#opm1q#icu2q#icp3q"/>
+        <LinkParameter id="mov1y#hym1q#page2q#enu2q#ln5q#par47q" name="Key [id_vuelo]_vuelo key" source="key.ent4y#att13y" target="mov1y#hym1q#miu4q.mov2y#mpkg1q#opm1q#icu2q#icp1q"/>
+      </Link>
+      <VRules>
+        <FormNotEmptyValidationRule id="mov1y#hym1q#page2q#enu2q#fnevr1q" name="NoVacio" errorMessage="El formulario no puede estar vac&#237;o"/>
+      </VRules>
+      <Field id="mov1y#hym1q#page2q#enu2q#fld7q" name="horaSalida " type="time" modifiable="true" attribute="ent4y#att15y"/>
+      <Field id="mov1y#hym1q#page2q#enu2q#fld8q" name="horaLlegada " type="time" modifiable="true" attribute="ent4y#att16y"/>
+      <Field id="mov1y#hym1q#page2q#enu2q#fld9q" name="diaSalida " type="date" modifiable="true" attribute="ent4y#att19y"/>
+      <Field id="mov1y#hym1q#page2q#enu2q#fld10q" name="diaLlegada " type="date" modifiable="true" attribute="ent4y#att20y">
+        <VRules>
+          <CompareValidationRule id="mov1y#hym1q#page2q#enu2q#fld10q#cmp3q" name="pasadoSalida" predicate="gt" valueField="mov1y#hym1q#page2q#enu2q#fld9q"/>
+        </VRules>
+      </Field>
+      <SelectionField id="mov1y#hym1q#page2q#enu2q#sfld2q" name="Origen" type="string" role="rel2y#role4y"/>
+      <SelectionField id="mov1y#hym1q#page2q#enu2q#sfld3q" name="Destino" type="string" role="rel3y#role6y"/>
+    </EntryUnit>
+    <PowerIndexUnit id="mov1y#hym1q#page2q#pwu2q" name="Vuelos Eliminados" linkOrder="mov1y#hym1q#page2q#pwu2q#ln6q" gr:x="105" gr:y="260" sortable="true" checkable="false" useCountQuery="false" entity="ent4y" displayAttributes="ent4y#att32y ent4y#att33y ent4y#att19y ent4y#att20y ent4y#att14y">
+      <Selector id="mov1y#hym1q#page2q#pwu2q#su4q" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1y#hym1q#page2q#pwu2q#su4q#acond4q" name="Eliminado" predicate="eq" booleanOperator="or" implied="false" ignoreCase="false" value="true" attributes="ent4y#att21y"/>
+      </Selector>
+      <Link id="mov1y#hym1q#page2q#pwu2q#ln6q" name="Restaurar" to="mov1y#hym1q#miu3q" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym1q#page2q#pwu2q#ln6q#par53q" name="horaSalida _id_vuelo" source="data[].ent4y#att13y" target="mov1y#hym1q#miu3q.mov2y#mpkg1q#opm2q#icu3q#icp4q"/>
+      </Link>
+    </PowerIndexUnit>
+    <SelectorUnit id="mov1y#hym1q#page2q#seu1q" name="Selector origen" gr:x="5" gr:y="0" entity="ent3y">
+      <Selector id="mov1y#hym1q#page2q#seu1q#su5q" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1y#hym1q#page2q#seu1q#su5q#acond5q" name="NoEliminado" predicate="neq" booleanOperator="or" implied="false" value="true" attributes="ent3y#att12y"/>
+      </Selector>
+      <Link id="mov1y#hym1q#page2q#seu1q#ln7q" name="Flow31" to="mov1y#hym1q#page2q#enu2q" type="transport" validate="true">
+        <LinkParameter id="mov1y#hym1q#page2q#seu1q#ln7q#par10q" name="nombre_Origen [label]" source="ent3y#att11yArray" target="mov1y#hym1q#page2q#enu2q#sfld2q_label"/>
+        <LinkParameter id="mov1y#hym1q#page2q#seu1q#ln7q#par11q" name="id_ciudad_Origen [output]" source="ent3y#att10yArray" target="mov1y#hym1q#page2q#enu2q#sfld2q_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov1y#hym1q#page2q#seu2q" name="Selector destino" gr:x="135" gr:y="0" entity="ent3y">
+      <Selector id="mov1y#hym1q#page2q#seu2q#su6q" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1y#hym1q#page2q#seu2q#su6q#acond6q" name="NoEliminado" predicate="neq" booleanOperator="or" implied="false" value="true" attributes="ent3y#att12y"/>
+      </Selector>
+      <Link id="mov1y#hym1q#page2q#seu2q#ln8q" name="Flow31" to="mov1y#hym1q#page2q#enu2q" type="transport" validate="true">
+        <LinkParameter id="mov1y#hym1q#page2q#seu2q#ln8q#par12q" name="nombre_Destino [label]" source="ent3y#att11yArray" target="mov1y#hym1q#page2q#enu2q#sfld3q_label"/>
+        <LinkParameter id="mov1y#hym1q#page2q#seu2q#ln8q#par13q" name="id_ciudad_Destino [output]" source="ent3y#att10yArray" target="mov1y#hym1q#page2q#enu2q#sfld3q_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym1q#page2q#pwu1q">
+          <layout:Link link="mov1y#hym1q#page2q#pwu1q#ln2q"/>
+          <layout:Link link="mov1y#hym1q#page2q#pwu1q#ln3q"/>
+          <layout:Attribute attribute="ent4y#att32y"/>
+          <layout:Attribute attribute="ent4y#att33y"/>
+          <layout:Attribute attribute="ent4y#att19y"/>
+          <layout:Attribute attribute="ent4y#att20y"/>
+          <layout:Attribute attribute="ent4y#att14y"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym1q#page2q#pwu2q">
+          <layout:Link link="mov1y#hym1q#page2q#pwu2q#ln6q"/>
+          <layout:Attribute attribute="ent4y#att32y"/>
+          <layout:Attribute attribute="ent4y#att33y"/>
+          <layout:Attribute attribute="ent4y#att19y"/>
+          <layout:Attribute attribute="ent4y#att20y"/>
+          <layout:Attribute attribute="ent4y#att14y"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym1q#page2q#enu2q">
+          <layout:Link link="mov1y#hym1q#page2q#enu2q#ln4q"/>
+          <layout:Link link="mov1y#hym1q#page2q#enu2q#ln5q"/>
+          <layout:Field field="mov1y#hym1q#page2q#enu2q#sfld2q"/>
+          <layout:Field field="mov1y#hym1q#page2q#enu2q#sfld3q"/>
+          <layout:Field field="mov1y#hym1q#page2q#enu2q#fld9q"/>
+          <layout:Field field="mov1y#hym1q#page2q#enu2q#fld7q"/>
+          <layout:Field field="mov1y#hym1q#page2q#enu2q#fld10q"/>
+          <layout:Field field="mov1y#hym1q#page2q#enu2q#fld8q"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

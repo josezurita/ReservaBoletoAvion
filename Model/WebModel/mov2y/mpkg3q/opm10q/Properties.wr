@@ -1,0 +1,47 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2y#mpkg3q#opm10q" name="CrearPasajero" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg3q#opm10q#icu11q" gr:x="-45" gr:y="45">
+      <Link id="mov2y#mpkg3q#opm10q#icu11q#ln27q" name="Flow15" to="mov2y#mpkg3q#opm10q#mfu10q" type="transport" validate="true" gr:bendpoints="179,-126,-211,-1">
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln27q#par101q" name="KeyCondition3 [id_pasajero]" source="mov2y#mpkg3q#opm10q#icu11q#icp29q" target="mov2y#mpkg3q#opm10q#mfu10q#su23q#kcond13q.ent1q#att1q"/>
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln27q#par102q" name="Reserva.id_reserva(PasajeroToReserva)" source="mov2y#mpkg3q#opm10q#icu11q#icp30q" target="mov2y#mpkg3q#opm10q#mfu10q.rel1q#role2q.ent6y#att26y"/>
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln27q#par103q" name="cedula" source="mov2y#mpkg3q#opm10q#icu11q#icp31q" target="mov2y#mpkg3q#opm10q#mfu10q.ent1q#att5q"/>
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln27q#par104q" name="emailPasajero" source="mov2y#mpkg3q#opm10q#icu11q#icp32q" target="mov2y#mpkg3q#opm10q#mfu10q.ent1q#att3q"/>
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln27q#par105q" name="fechaNacimiento" source="mov2y#mpkg3q#opm10q#icu11q#icp33q" target="mov2y#mpkg3q#opm10q#mfu10q.ent1q#att4q"/>
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln27q#par106q" name="nombrePasajero" source="mov2y#mpkg3q#opm10q#icu11q#icp34q" target="mov2y#mpkg3q#opm10q#mfu10q.ent1q#att2q"/>
+      </Link>
+      <Link id="mov2y#mpkg3q#opm10q#icu11q#ln30q" name="Flow16" to="mov2y#mpkg3q#opm10q#cru6q" type="transport" validate="true" gr:bendpoints="177,110,-208,10">
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln30q#par107q" name="cedula_cedula" source="mov2y#mpkg3q#opm10q#icu11q#icp31q" target="mov2y#mpkg3q#opm10q#cru6q.ent1q#att5q"/>
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln30q#par108q" name="emailPasajero_emailPasajero" source="mov2y#mpkg3q#opm10q#icu11q#icp32q" target="mov2y#mpkg3q#opm10q#cru6q.ent1q#att3q"/>
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln30q#par109q" name="fechaNacimiento_fechaNacimiento" source="mov2y#mpkg3q#opm10q#icu11q#icp33q" target="mov2y#mpkg3q#opm10q#cru6q.ent1q#att4q"/>
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln30q#par110q" name="nombrePasajero_nombrePasajero" source="mov2y#mpkg3q#opm10q#icu11q#icp34q" target="mov2y#mpkg3q#opm10q#cru6q.ent1q#att2q"/>
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#ln30q#par111q" name="Reserva.id_reserva(PasajeroToReserva)_Reserva.id_reserva(PasajeroToReserva)" source="mov2y#mpkg3q#opm10q#icu11q#icp30q" target="mov2y#mpkg3q#opm10q#cru6q.rel1q#role2q.ent6y#att26y"/>
+      </Link>
+      <OKLink id="mov2y#mpkg3q#opm10q#icu11q#oln36q" name="OKFlow3" to="mov2y#mpkg3q#opm10q#inn4q">
+        <LinkParameter id="mov2y#mpkg3q#opm10q#icu11q#oln36q#par100q" name="pais key_Input" source="mov2y#mpkg3q#opm10q#icu11q#icp29q" target="mov2y#mpkg3q#opm10q#inn4q.isnotnull"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2y#mpkg3q#opm10q#icu11q#icp29q" name="KeyCondition3 [id_pasajero]"/>
+      <InputCollectorParameter id="mov2y#mpkg3q#opm10q#icu11q#icp30q" name="Reserva.id_reserva(PasajeroToReserva)"/>
+      <InputCollectorParameter id="mov2y#mpkg3q#opm10q#icu11q#icp31q" name="cedula"/>
+      <InputCollectorParameter id="mov2y#mpkg3q#opm10q#icu11q#icp32q" name="emailPasajero"/>
+      <InputCollectorParameter id="mov2y#mpkg3q#opm10q#icu11q#icp33q" name="fechaNacimiento"/>
+      <InputCollectorParameter id="mov2y#mpkg3q#opm10q#icu11q#icp34q" name="nombrePasajero"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit id="mov2y#mpkg3q#opm10q#inn4q" name="&#191;Pasajero existe?" gr:x="360" gr:y="80" emptyStringAsNull="true">
+      <OKLink id="mov2y#mpkg3q#opm10q#inn4q#oln37q" name="OKFlow4" to="mov2y#mpkg3q#opm10q#mfu10q" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg3q#opm10q#inn4q#kln23q" name="KOFlow3" to="mov2y#mpkg3q#opm10q#cru6q" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <CreateUnit id="mov2y#mpkg3q#opm10q#cru6q" name="Crear pasajero" gr:x="500" gr:y="190" entity="ent1q" bulk="true">
+      <KOLink id="mov2y#mpkg3q#opm10q#cru6q#kln24q" name="KOFlow4" to="mov2y#mpkg3q#opm10q#kocu12q" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg3q#opm10q#cru6q#oln38q" name="OKFlow6" to="mov2y#mpkg3q#opm10q#okcu10q" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit id="mov2y#mpkg3q#opm10q#mfu10q" name="Actualizar pasajero" gr:x="480" gr:y="-65" entity="ent1q" bulk="true">
+      <Selector id="mov2y#mpkg3q#opm10q#mfu10q#su23q" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg3q#opm10q#mfu10q#su23q#kcond13q" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov2y#mpkg3q#opm10q#mfu10q#kln25q" name="KOFlow5" to="mov2y#mpkg3q#opm10q#kocu12q" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg3q#opm10q#mfu10q#oln39q" name="OKFlow5" to="mov2y#mpkg3q#opm10q#okcu10q" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov2y#mpkg3q#opm10q#okcu10q" name="&#201;xito" gr:x="720" gr:y="-55"/>
+    <KOCollectorUnit id="mov2y#mpkg3q#opm10q#kocu12q" name="Fracaso" gr:x="720" gr:y="190"/>
+  </OperationUnits>
+</OperationModule>

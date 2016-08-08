@@ -1,0 +1,52 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2y#mpkg1q#opm1q" name="CrearVuelo" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg1q#opm1q#icu2q" gr:x="30" gr:y="35">
+      <Link id="mov2y#mpkg1q#opm1q#icu2q#ln9q" name="Flow15" to="mov2y#mpkg1q#opm1q#mfu1q" type="transport" validate="true" gr:bendpoints="179,-126,-211,-1">
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln9q#par26q" name="vuelo key_KeyCondition3 [id_vuelo]" source="mov2y#mpkg1q#opm1q#icu2q#icp1q" target="mov2y#mpkg1q#opm1q#mfu1q#su7q#kcond1q.ent4y#att13y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln9q#par27q" name="false_borrado " sourceValue="FALSE" target="mov2y#mpkg1q#opm1q#mfu1q.ent4y#att21y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln9q#par29q" name="id_origen_Ciudad .id_ciudad(Destino)" source="mov2y#mpkg1q#opm1q#icu2q#icp6q" target="mov2y#mpkg1q#opm1q#mfu1q.rel3y#role6y.ent3y#att10y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln9q#par30q" name="id_origen_Ciudad .id_ciudad(Origen)" source="mov2y#mpkg1q#opm1q#icu2q#icp3q" target="mov2y#mpkg1q#opm1q#mfu1q.rel2y#role4y.ent3y#att10y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln9q#par31q" name="diaLlegada_diaLlegada " source="mov2y#mpkg1q#opm1q#icu2q#icp7q" target="mov2y#mpkg1q#opm1q#mfu1q.ent4y#att20y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln9q#par32q" name="diaSalida_diaSalida " source="mov2y#mpkg1q#opm1q#icu2q#icp2q" target="mov2y#mpkg1q#opm1q#mfu1q.ent4y#att19y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln9q#par33q" name="horaLlegada_horaLlegada " source="mov2y#mpkg1q#opm1q#icu2q#icp9q" target="mov2y#mpkg1q#opm1q#mfu1q.ent4y#att16y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln9q#par34q" name="horaSalida_horaSalida " source="mov2y#mpkg1q#opm1q#icu2q#icp8q" target="mov2y#mpkg1q#opm1q#mfu1q.ent4y#att15y"/>
+      </Link>
+      <Link id="mov2y#mpkg1q#opm1q#icu2q#ln10q" name="Flow16" to="mov2y#mpkg1q#opm1q#cru1q" type="transport" validate="true" gr:bendpoints="177,110,-208,10">
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln10q#par28q" name="false_borrado " sourceValue="FALSE" target="mov2y#mpkg1q#opm1q#cru1q.ent4y#att21y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln10q#par35q" name="id_destino_Ciudad .id_ciudad(Destino)" source="mov2y#mpkg1q#opm1q#icu2q#icp6q" target="mov2y#mpkg1q#opm1q#cru1q.rel3y#role6y.ent3y#att10y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln10q#par36q" name="id_origen_Ciudad .id_ciudad(Origen)" source="mov2y#mpkg1q#opm1q#icu2q#icp3q" target="mov2y#mpkg1q#opm1q#cru1q.rel2y#role4y.ent3y#att10y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln10q#par37q" name="diaLlegada_diaLlegada " source="mov2y#mpkg1q#opm1q#icu2q#icp7q" target="mov2y#mpkg1q#opm1q#cru1q.ent4y#att20y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln10q#par38q" name="diaSalida_diaSalida " source="mov2y#mpkg1q#opm1q#icu2q#icp2q" target="mov2y#mpkg1q#opm1q#cru1q.ent4y#att19y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln10q#par39q" name="horaLlegada_horaLlegada " source="mov2y#mpkg1q#opm1q#icu2q#icp9q" target="mov2y#mpkg1q#opm1q#cru1q.ent4y#att16y"/>
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#ln10q#par40q" name="diaSalida_horaSalida " source="mov2y#mpkg1q#opm1q#icu2q#icp2q" target="mov2y#mpkg1q#opm1q#cru1q.ent4y#att15y"/>
+      </Link>
+      <InputCollectorParameter id="mov2y#mpkg1q#opm1q#icu2q#icp1q" name="vuelo key"/>
+      <InputCollectorParameter id="mov2y#mpkg1q#opm1q#icu2q#icp2q" name="diaSalida"/>
+      <OKLink id="mov2y#mpkg1q#opm1q#icu2q#oln5q" name="OKFlow3" to="mov2y#mpkg1q#opm1q#inn1q">
+        <LinkParameter id="mov2y#mpkg1q#opm1q#icu2q#oln5q#par21q" name="pais key_Input" source="mov2y#mpkg1q#opm1q#icu2q#icp1q" target="mov2y#mpkg1q#opm1q#inn1q.isnotnull"/>
+      </OKLink>
+      <InputCollectorParameter id="mov2y#mpkg1q#opm1q#icu2q#icp3q" name="id_origen"/>
+      <InputCollectorParameter id="mov2y#mpkg1q#opm1q#icu2q#icp6q" name="id_destino"/>
+      <InputCollectorParameter id="mov2y#mpkg1q#opm1q#icu2q#icp7q" name="diaLlegada"/>
+      <InputCollectorParameter id="mov2y#mpkg1q#opm1q#icu2q#icp8q" name="horaSalida"/>
+      <InputCollectorParameter id="mov2y#mpkg1q#opm1q#icu2q#icp9q" name="horaLlegada"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit id="mov2y#mpkg1q#opm1q#inn1q" name="&#191;Vuelo existe?" gr:x="360" gr:y="80" emptyStringAsNull="true">
+      <OKLink id="mov2y#mpkg1q#opm1q#inn1q#oln6q" name="OKFlow4" to="mov2y#mpkg1q#opm1q#mfu1q" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg1q#opm1q#inn1q#kln4q" name="KOFlow3" to="mov2y#mpkg1q#opm1q#cru1q" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <CreateUnit id="mov2y#mpkg1q#opm1q#cru1q" name="Crear vuelo" gr:x="500" gr:y="190" entity="ent4y">
+      <KOLink id="mov2y#mpkg1q#opm1q#cru1q#kln5q" name="KOFlow4" to="mov2y#mpkg1q#opm1q#kocu1q" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg1q#opm1q#cru1q#oln7q" name="OKFlow6" to="mov2y#mpkg1q#opm1q#okcu1q" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit id="mov2y#mpkg1q#opm1q#mfu1q" name="Actualizar vuelo" gr:x="480" gr:y="-65" entity="ent4y">
+      <Selector id="mov2y#mpkg1q#opm1q#mfu1q#su7q" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg1q#opm1q#mfu1q#su7q#kcond1q" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov2y#mpkg1q#opm1q#mfu1q#kln6q" name="KOFlow5" to="mov2y#mpkg1q#opm1q#kocu1q" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg1q#opm1q#mfu1q#oln8q" name="OKFlow5" to="mov2y#mpkg1q#opm1q#okcu1q" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov2y#mpkg1q#opm1q#okcu1q" name="&#201;xito" gr:x="720" gr:y="-55"/>
+    <KOCollectorUnit id="mov2y#mpkg1q#opm1q#kocu1q" name="Fracaso" gr:x="720" gr:y="190"/>
+  </OperationUnits>
+</OperationModule>

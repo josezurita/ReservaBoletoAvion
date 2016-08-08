@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2q#page13q" name="Ingresar" gr:x="209" gr:y="288" landmark="true">
+  <ContentUnits>
+    <EntryUnit id="sv2q#page13q#enu3q" name="Por favor ingrese al sistema" linkOrder="sv2q#page13q#enu3q#ln36q" gr:x="0" gr:y="0">
+      <Field id="sv2q#page13q#enu3q#fld17q" name="Usuario" type="string" modifiable="true"/>
+      <Field id="sv2q#page13q#enu3q#fld18q" name="Contrase&#241;a" type="password" modifiable="true"/>
+      <Link id="sv2q#page13q#enu3q#ln36q" name="Ingresar" to="sv2q#miu10q" type="normal" validate="true">
+        <LinkParameter id="sv2q#page13q#enu3q#ln36q#par83q" name="Contrase&#241;a_Password" source="sv2q#page13q#enu3q#fld18q" target="sv2q#miu10q.mov2y#mpkg4q#opm4q#icu5q#icp11q"/>
+        <LinkParameter id="sv2q#page13q#enu3q#ln36q#par84q" name="Recordar_Remember Credentials (Persistent Cookie)" source="sv2q#page13q#enu3q#fld19q" target="sv2q#miu10q.mov2y#mpkg4q#opm4q#icu5q#icp12q"/>
+        <LinkParameter id="sv2q#page13q#enu3q#ln36q#par85q" name="Usuario_Username" source="sv2q#page13q#enu3q#fld17q" target="sv2q#miu10q.mov2y#mpkg4q#opm4q#icu5q#icp13q"/>
+      </Link>
+      <Field id="sv2q#page13q#enu3q#fld19q" name="Recordar" type="boolean" modifiable="true"/>
+    </EntryUnit>
+    <MultiMessageUnit id="sv2q#page13q#mssu5q" name="Error" gr:x="65" gr:y="75"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2q#page13q#enu3q">
+          <layout:Link link="sv2q#page13q#enu3q#ln36q"/>
+          <layout:Field field="sv2q#page13q#enu3q#fld17q"/>
+          <layout:Field field="sv2q#page13q#enu3q#fld18q"/>
+          <layout:Field field="sv2q#page13q#enu3q#fld19q">
+            <layout:LayoutParameter name="boolean-field-rendering" value="checkbox" type="field"/>
+          </layout:Field>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2q#page13q#mssu5q"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

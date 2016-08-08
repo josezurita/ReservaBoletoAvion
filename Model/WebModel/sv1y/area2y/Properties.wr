@@ -1,0 +1,9 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="5" gr:y="-10" id="sv1y#area2y" name="Administraci&#243;n" landmark="true" defaultPage="sv1y#area2y#miu8y" landmarks="sv1y#area2y#miu8y sv1y#area2y#miu4y sv1y#area2y#miu1q sv1y#area2y#miu24q sv1y#area2y#miu25q">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv1y#area2y#miu4y" moduleId="mov1y#hym1y" landmark="true"/>
+    <ModuleInstanceUnit id="sv1y#area2y#miu8y" gr:x="0" gr:y="85" moduleId="mov1y#hym2y" landmark="true"/>
+    <ModuleInstanceUnit gr:x="0" gr:y="165" id="sv1y#area2y#miu1q" action="false" landmark="true" moduleId="mov1y#hym1q"/>
+    <ModuleInstanceUnit id="sv1y#area2y#miu24q" landmark="true" gr:x="0" gr:y="315" action="false" moduleId="mov1y#hym5q"/>
+    <ModuleInstanceUnit id="sv1y#area2y#miu25q" landmark="true" gr:x="0" gr:y="240" action="false" moduleId="mov1y#hym4q"/>
+  </OperationUnits>
+</Area>

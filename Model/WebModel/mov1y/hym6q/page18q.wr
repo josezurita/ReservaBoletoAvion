@@ -1,0 +1,29 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1y#hym6q#page18q" name="Perfil de usuario" gr:x="45" gr:y="35">
+  <ContentUnits>
+    <DataUnit id="mov1y#hym6q#page18q#dau8q" name="Detalles de usuario" linkOrder="mov1y#hym6q#page18q#dau8q#ln62q" gr:x="165" gr:y="0" entity="User" displayAttributes="User#att28y User#att29y User#att34y email userName">
+      <Selector id="mov1y#hym6q#page18q#dau8q#su33q" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1y#hym6q#page18q#dau8q#su33q#kcond21q" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov1y#hym6q#page18q#dau8q#ln62q" name="Salir" to="mov1y#hym6q#miu20q" type="normal" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <GetUnit id="mov1y#hym6q#page18q#gtu4q" name="GetUser" gr:x="0" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="mov1y#hym6q#page18q#gtu4q#ln63q" name="Flow17" to="mov1y#hym6q#page18q#dau8q" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

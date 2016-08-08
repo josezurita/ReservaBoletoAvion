@@ -1,0 +1,101 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="295" gr:y="95" id="mov1y#hym4q#page14q" name="Grupos" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="205" gr:y="0" id="mov1y#hym4q#page14q#enu4q" name="Formulario de grupo" linkOrder="mov1y#hym4q#page14q#enu4q#ln46q mov1y#hym4q#page14q#enu4q#ln48q" entity="Group">
+      <Link id="mov1y#hym4q#page14q#enu4q#ln46q" name="Guardar" to="mov1y#hym4q#miu13q" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym4q#page14q#enu4q#ln46q#par127q" name="groupName_groupName" source="mov1y#hym4q#page14q#enu4q#fld21q" target="mov1y#hym4q#miu13q.mov2y#mpkg5q#opm12q#icu14q#icp23q"/>
+        <LinkParameter id="mov1y#hym4q#page14q#enu4q#ln46q#par128q" name="defaultModule_Module.oid(defaultModule)" source="mov1y#hym4q#page14q#enu4q#sfld4q" target="mov1y#hym4q#miu13q.mov2y#mpkg5q#opm12q#icu14q#icp16q"/>
+        <LinkParameter id="mov1y#hym4q#page14q#enu4q#ln46q#par129q" name="modules_Module.oid(modules)" source="mov1y#hym4q#page14q#enu4q#msfld2q" target="mov1y#hym4q#miu13q.mov2y#mpkg5q#opm12q#icu14q#icp17q"/>
+        <LinkParameter id="mov1y#hym4q#page14q#enu4q#ln46q#par130q" name="Key [oid]_oid" source="key.groupOID" target="mov1y#hym4q#miu13q.mov2y#mpkg5q#opm12q#icu14q#icp25q"/>
+      </Link>
+      <Link id="mov1y#hym4q#page14q#enu4q#ln48q" name="Cancelar" to="mov1y#hym4q#page14q" automaticCoupling="true" type="normal" validate="true"/>
+      <Field id="mov1y#hym4q#page14q#enu4q#fld21q" name="groupName" type="string" modifiable="true" attribute="groupName"/>
+      <SelectionField id="mov1y#hym4q#page14q#enu4q#sfld4q" name="defaultModule" type="string" role="Group2DefaultModule"/>
+      <MultiSelectionField id="mov1y#hym4q#page14q#enu4q#msfld2q" name="modules" type="string" role="Group2Module"/>
+    </EntryUnit>
+    <PowerIndexUnit gr:x="5" gr:y="125" id="mov1y#hym4q#page14q#pwu3q" name="Lista de grupos" sortable="true" checkable="false" useCountQuery="false" linkOrder="mov1y#hym4q#page14q#pwu3q#ln39q mov1y#hym4q#page14q#pwu3q#ln47q" entity="Group" displayAttributes="groupName groupOID">
+      <Link id="mov1y#hym4q#page14q#pwu3q#ln37q" name="Flow37" to="mov1y#hym4q#page14q#seu5q" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="mov1y#hym4q#page14q#pwu3q#ln39q" name="Editar" to="mov1y#hym4q#page14q#enu4q" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym4q#page14q#pwu3q#ln39q#par152q" name="defaultModule.oid_defaultModule - Preselection" source="data[].Group2DefaultModule_moduleOID" target="mov1y#hym4q#page14q#enu4q#sfld4q_presel"/>
+        <LinkParameter id="mov1y#hym4q#page14q#pwu3q#ln39q#par153q" name="oid_Key Condition [oid]" source="data[].groupOID" target="mov1y#hym4q#page14q#enu4q.groupOID"/>
+      </Link>
+      <Link id="mov1y#hym4q#page14q#pwu3q#ln47q" name="Eliminar" to="mov1y#hym4q#miu14q" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym4q#page14q#pwu3q#ln47q#par126q" name="oid_KeyCondition18 [oid]" source="data[].groupOID" target="mov1y#hym4q#miu14q.mov2y#mpkg5q#opm13q#icu15q#icp26q"/>
+      </Link>
+    </PowerIndexUnit>
+    <SelectorUnit gr:x="0" gr:y="0" id="mov1y#hym4q#page14q#seu4q" name="Todos los m&#243;dulos" entity="Module">
+      <Link id="mov1y#hym4q#page14q#seu4q#ln40q" name="Flow40" to="mov1y#hym4q#page14q#enu4q" type="transport" validate="true">
+        <LinkParameter id="mov1y#hym4q#page14q#seu4q#ln40q#par87q" name="moduleName_defaultModule [label]" source="moduleNameArray" target="mov1y#hym4q#page14q#enu4q#sfld4q_label"/>
+        <LinkParameter id="mov1y#hym4q#page14q#seu4q#ln40q#par88q" name="moduleID_defaultModule [output]" source="moduleOIDArray" target="mov1y#hym4q#page14q#enu4q#sfld4q_output"/>
+        <LinkParameter id="mov1y#hym4q#page14q#seu4q#ln40q#par89q" name="moduleName_modules [label]" source="moduleNameArray" target="mov1y#hym4q#page14q#enu4q#msfld2q_label"/>
+        <LinkParameter id="mov1y#hym4q#page14q#seu4q#ln40q#par90q" name="moduleID_modules [output]" source="moduleOIDArray" target="mov1y#hym4q#page14q#enu4q#msfld2q_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="210" gr:y="120" id="mov1y#hym4q#page14q#seu5q" name="M&#243;dulos asociados" entity="Module">
+      <Link id="mov1y#hym4q#page14q#seu5q#ln42q" name="Flow42" to="mov1y#hym4q#page14q#enu4q" type="transport" validate="true">
+        <LinkParameter id="mov1y#hym4q#page14q#seu5q#ln42q#par154q" name="oid_modules - Preselection" source="moduleOIDArray" target="mov1y#hym4q#page14q#enu4q#msfld2q_presel"/>
+      </Link>
+      <Selector id="mov1y#hym4q#page14q#seu5q#su27q" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1y#hym4q#page14q#seu5q#su27q#rcond2q" name="Modulos" predicate="in" implied="false" role="Group2Module"/>
+      </Selector>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym4q#page14q#enu4q">
+          <layout:Link link="mov1y#hym4q#page14q#enu4q#ln46q"/>
+          <layout:Link link="mov1y#hym4q#page14q#enu4q#ln48q"/>
+          <layout:Field field="mov1y#hym4q#page14q#enu4q#fld21q"/>
+          <layout:Field field="mov1y#hym4q#page14q#enu4q#sfld4q"/>
+          <layout:Field field="mov1y#hym4q#page14q#enu4q#msfld2q"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym4q#page14q#pwu3q">
+          <layout:Link link="mov1y#hym4q#page14q#pwu3q#ln39q"/>
+          <layout:Link link="mov1y#hym4q#page14q#pwu3q#ln47q"/>
+          <layout:Attribute attribute="groupName"/>
+          <layout:Attribute attribute="groupOID"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

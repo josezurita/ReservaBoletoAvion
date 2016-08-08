@@ -1,0 +1,37 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="5" id="mov2y#mpkg1y#opm4y" name="CrearPais">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg1y#opm4y#icu4y" gr:x="30" gr:y="60">
+      <Link id="mov2y#mpkg1y#opm4y#icu4y#ln15y" name="Flow15" to="mov2y#mpkg1y#opm4y#mfu1y" type="transport" validate="true" gr:bendpoints="179,-126,-211,-1">
+        <LinkParameter id="mov2y#mpkg1y#opm4y#icu4y#ln15y#par10y" name="pais key_KeyCondition3 [id_pais]" source="mov2y#mpkg1y#opm4y#icu4y#icp1y" target="mov2y#mpkg1y#opm4y#mfu1y#su3y#kcond3y.ent2y#att7y"/>
+        <LinkParameter id="mov2y#mpkg1y#opm4y#icu4y#ln15y#par12y" name="nombrePais_nombrePais" source="mov2y#mpkg1y#opm4y#icu4y#icp2y" target="mov2y#mpkg1y#opm4y#mfu1y.ent2y#att8y"/>
+        <LinkParameter id="mov2y#mpkg1y#opm4y#icu4y#ln15y#par17y" name="false_borrado" sourceValue="false" target="mov2y#mpkg1y#opm4y#mfu1y.ent2y#att9y"/>
+      </Link>
+      <Link id="mov2y#mpkg1y#opm4y#icu4y#ln16y" name="Flow16" to="mov2y#mpkg1y#opm4y#cru1y" type="transport" validate="true" gr:bendpoints="177,110,-208,10">
+        <LinkParameter id="mov2y#mpkg1y#opm4y#icu4y#ln16y#par13y" name="nombrePais_nombrePais" source="mov2y#mpkg1y#opm4y#icu4y#icp2y" target="mov2y#mpkg1y#opm4y#cru1y.ent2y#att8y"/>
+        <LinkParameter id="mov2y#mpkg1y#opm4y#icu4y#ln16y#par18y" name="false_borrado" sourceValue="false" target="mov2y#mpkg1y#opm4y#cru1y.ent2y#att9y"/>
+      </Link>
+      <InputCollectorParameter id="mov2y#mpkg1y#opm4y#icu4y#icp1y" name="pais key"/>
+      <InputCollectorParameter id="mov2y#mpkg1y#opm4y#icu4y#icp2y" name="nombrePais"/>
+      <OKLink id="mov2y#mpkg1y#opm4y#icu4y#oln3y" name="OKFlow3" to="mov2y#mpkg1y#opm4y#inn1y">
+        <LinkParameter id="mov2y#mpkg1y#opm4y#icu4y#oln3y#par14y" name="pais key_Input" source="mov2y#mpkg1y#opm4y#icu4y#icp1y" target="mov2y#mpkg1y#opm4y#inn1y.isnotnull"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <IsNotNullUnit gr:x="360" gr:y="70" id="mov2y#mpkg1y#opm4y#inn1y" name="&#191;Pais existe?" emptyStringAsNull="true">
+      <OKLink id="mov2y#mpkg1y#opm4y#inn1y#oln4y" name="OKFlow4" to="mov2y#mpkg1y#opm4y#mfu1y" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg1y#opm4y#inn1y#kln3y" name="KOFlow3" to="mov2y#mpkg1y#opm4y#cru1y" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="500" gr:y="180" id="mov2y#mpkg1y#opm4y#cru1y" name="Crear pais" entity="ent2y">
+      <KOLink id="mov2y#mpkg1y#opm4y#cru1y#kln4y" name="KOFlow4" to="mov2y#mpkg1y#opm4y#kocu1y" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg1y#opm4y#cru1y#oln6y" name="OKFlow6" to="mov2y#mpkg1y#opm4y#okcu1y" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="480" gr:y="-75" id="mov2y#mpkg1y#opm4y#mfu1y" name="Actualizar pais" entity="ent2y">
+      <Selector id="mov2y#mpkg1y#opm4y#mfu1y#su3y" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg1y#opm4y#mfu1y#su3y#kcond3y" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov2y#mpkg1y#opm4y#mfu1y#kln5y" name="KOFlow5" to="mov2y#mpkg1y#opm4y#kocu1y" automaticCoupling="true"/>
+      <OKLink id="mov2y#mpkg1y#opm4y#mfu1y#oln5y" name="OKFlow5" to="mov2y#mpkg1y#opm4y#okcu1y" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="720" gr:y="-65" id="mov2y#mpkg1y#opm4y#okcu1y" name="&#201;xito"/>
+    <KOCollectorUnit gr:x="720" gr:y="180" id="mov2y#mpkg1y#opm4y#kocu1y" name="Fracaso"/>
+  </OperationUnits>
+</OperationModule>

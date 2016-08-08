@@ -1,0 +1,15 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="235" gr:y="-10" id="sv1y#area1y" name="Reserva" landmark="true" defaultPage="sv1y#area1y#page2y" landmarks="sv1y#area1y#page2y">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv1y#area1y#miu6q" gr:x="435" gr:y="175" action="true" moduleId="mov2y#mpkg2q#opm5q">
+      <OKLink id="sv1y#area1y#miu6q#oln27q" name="OKFlow27" to="sv1y#area1y#page1q#dau3q">
+        <LinkParameter id="sv1y#area1y#miu6q#oln27q#par15q" name="idReserva_KeyCondition9 [id_reserva]" source="mov2y#mpkg2q#opm5q#okcu6q#ocp1q" target="sv1y#area1y#page1q#dau3q#su16q#kcond9q.ent6y#att26y"/>
+      </OKLink>
+      <KOLink id="sv1y#area1y#miu6q#kln15q" name="KOFlow15" to="sv1y#area1y#page6q" automaticCoupling="true" codeRef="mov2y#mpkg2q#opm5q#kocu7q"/>
+      <KOLink id="sv1y#area1y#miu6q#kln16q" name="KOFlow15" to="sv1y#area1y#page7q" codeRef="mov2y#mpkg2q#opm5q#kocu4q" automaticCoupling="true" gr:bendpoints="198,134,-92,-151;198,247,-92,-38"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv1y#area1y#miu7q" gr:x="1125" gr:y="60" action="true" moduleId="mov2y#mpkg3q#opm10q">
+      <KOLink id="sv1y#area1y#miu7q#kln17q" name="KOFlow17" to="sv1y#area1y#page6q" automaticCoupling="true" gr:bendpoints="-120,55,285,-245;-120,240,285,-60"/>
+      <OKLink id="sv1y#area1y#miu7q#oln13q" name="OKFlow13" to="sv1y#area1y#page8q#mssu3q" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

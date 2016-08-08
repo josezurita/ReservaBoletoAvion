@@ -1,0 +1,19 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="10" gr:y="10" id="mov1y#hym1y" name="Manejo Pais" landmarks="mov1y#hym1y#page6y">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="-15" gr:y="80" id="mov1y#hym1y#icu6y" name="Input Port">
+      <OKLink id="mov1y#hym1y#icu6y#oln12y" to="mov1y#hym1y#page6y" name="Flow"/>
+    </InputCollectorUnit>
+    <ModuleInstanceUnit id="mov1y#hym1y#miu5y" gr:x="275" gr:y="340" action="true" moduleId="mov2y#mpkg1y#opm3y">
+      <OKLink id="mov1y#hym1y#miu5y#oln13y" name="OKFlow1" to="mov1y#hym1y#page6y" automaticCoupling="true" gr:bendpoints="-112,-43,-218,211;-111,-207,-221,48"/>
+      <KOLink id="mov1y#hym1y#miu5y#kln9y" name="KOFlow1" to="mov1y#hym1y#page5y" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1y#hym1y#miu6y" gr:x="480" gr:y="280" action="true" moduleId="mov2y#mpkg1y#opm5y">
+      <OKLink id="mov1y#hym1y#miu6y#oln14y" name="OKFlow9" to="mov1y#hym1y#page6y" automaticCoupling="true" gr:bendpoints="123,-47,213,143;118,-149,218,45"/>
+      <KOLink id="mov1y#hym1y#miu6y#kln10y" name="KOFlow7" to="mov1y#hym1y#page5y" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1y#hym1y#miu7y" gr:x="770" gr:y="40" action="true" moduleId="mov2y#mpkg1y#opm4y">
+      <OKLink id="mov1y#hym1y#miu7y#oln15y" name="OKFlow2" to="mov1y#hym1y#page6y" automaticCoupling="true" gr:bendpoints="-53,-116,321,-162;-354,-116,20,-162"/>
+      <KOLink id="mov1y#hym1y#miu7y#kln11y" name="KOFlow2" to="mov1y#hym1y#page5y" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</HybridModule>

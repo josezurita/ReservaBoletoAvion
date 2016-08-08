@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov2y#mpkg1y#opm5y" name="RestaurarPais" gr:x="0" gr:y="115">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2y#mpkg1y#opm5y#icu5y" gr:x="35" gr:y="175">
+      <InputCollectorParameter id="mov2y#mpkg1y#opm5y#icu5y#icp4y" name="pais key"/>
+      <OKLink id="mov2y#mpkg1y#opm5y#icu5y#oln10y" name="OKFlow7" to="mov2y#mpkg1y#opm5y#mfu3y">
+        <LinkParameter id="mov2y#mpkg1y#opm5y#icu5y#oln10y#par22y" name="true_borrado" target="mov2y#mpkg1y#opm5y#mfu3y.ent2y#att9y" sourceValue="FALSE"/>
+        <LinkParameter id="mov2y#mpkg1y#opm5y#icu5y#oln10y#par23y" name="pais key_KeyCondition4 [id_pais]" source="mov2y#mpkg1y#opm5y#icu5y#icp4y" target="mov2y#mpkg1y#opm5y#mfu3y#su7y#kcond5y.ent2y#att7y"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov2y#mpkg1y#opm5y#okcu3y" name="&#201;xito" gr:x="685" gr:y="70"/>
+    <KOCollectorUnit id="mov2y#mpkg1y#opm5y#kocu3y" name="Fracaso" gr:x="685" gr:y="245"/>
+    <ModifyUnit id="mov2y#mpkg1y#opm5y#mfu3y" name="Restaurar pais" gr:x="405" gr:y="165" entity="ent2y">
+      <Selector id="mov2y#mpkg1y#opm5y#mfu3y#su7y" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2y#mpkg1y#opm5y#mfu3y#su7y#kcond5y" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2y#mpkg1y#opm5y#mfu3y#oln11y" name="OKFlow8" to="mov2y#mpkg1y#opm5y#okcu3y" automaticCoupling="true"/>
+      <KOLink id="mov2y#mpkg1y#opm5y#mfu3y#kln8y" name="KOFlow6" to="mov2y#mpkg1y#opm5y#kocu3y" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

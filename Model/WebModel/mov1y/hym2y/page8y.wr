@@ -1,0 +1,135 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1y#hym2y#page8y" name="Ciudad" gr:x="315" gr:y="-130" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit id="mov1y#hym2y#page8y#pwu8y" name="Ciudades" linkOrder="mov1y#hym2y#page8y#pwu8y#ln26y mov1y#hym2y#page8y#pwu8y#ln27y" gr:x="0" gr:y="125" sortable="true" checkable="false" useCountQuery="false" entity="ent3y" displayAttributes="ent3y#att11y ent3y#att2y">
+      <Link id="mov1y#hym2y#page8y#pwu8y#ln26y" name="Editar" to="mov1y#hym2y#page8y#enu5y" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="mov1y#hym2y#page8y#pwu8y#ln27y" name="Borrar" to="mov1y#hym2y#miu9y" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym2y#page8y#pwu8y#ln27y#par69y" name="id_ciudad_ciudad key" source="data[].ent3y#att10y" target="mov1y#hym2y#miu9y.mov2y#mpkg3y#opm9y#icu11y#icp9y"/>
+      </Link>
+      <Selector id="mov1y#hym2y#page8y#pwu8y#su10y" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1y#hym2y#page8y#pwu8y#su10y#acond5y" name="NoBorrado" predicate="neq" booleanOperator="or" implied="false" ignoreCase="false" value="true" attributes="ent3y#att12y"/>
+      </Selector>
+    </PowerIndexUnit>
+    <EntryUnit id="mov1y#hym2y#page8y#enu5y" name="Ciudad" linkOrder="mov1y#hym2y#page8y#enu5y#ln28y mov1y#hym2y#page8y#enu5y#ln29y" gr:x="240" gr:y="135" entity="ent3y">
+      <Link id="mov1y#hym2y#page8y#enu5y#ln28y" name="Cancelar" to="mov1y#hym2y#page8y" type="normal" automaticCoupling="true" validate="false" gr:bendpoints="-2,-104,78,-94"/>
+      <Link id="mov1y#hym2y#page8y#enu5y#ln29y" name="Guardar" to="mov1y#hym2y#miu11y" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym2y#page8y#enu5y#ln29y#par66y" name="Key [id_ciudad]_ciudad key" source="key.ent3y#att10y" target="mov1y#hym2y#miu11y.mov2y#mpkg3y#opm10y#icu12y#icp10y"/>
+        <LinkParameter id="mov1y#hym2y#page8y#enu5y#ln29y#par67y" name="Ciudad ToPais_id_pais" source="mov1y#hym2y#page8y#enu5y#sfld7y" target="mov1y#hym2y#miu11y.mov2y#mpkg3y#opm10y#icu12y#icp13y"/>
+        <LinkParameter id="mov1y#hym2y#page8y#enu5y#ln29y#par68y" name="nombre_nombreCiudad" source="mov1y#hym2y#page8y#enu5y#fld23y" target="mov1y#hym2y#miu11y.mov2y#mpkg3y#opm10y#icu12y#icp11y"/>
+      </Link>
+      <Field id="mov1y#hym2y#page8y#enu5y#fld23y" name="nombre" type="string" modifiable="true" attribute="ent3y#att11y"/>
+      <SelectionField id="mov1y#hym2y#page8y#enu5y#sfld7y" name="Ciudad ToPais" type="string" role="rel1y#role2y"/>
+      <VRules>
+        <FormNotEmptyValidationRule id="mov1y#hym2y#page8y#enu5y#fnevr1y" name="NoVacio" errorMessage="El formulario no puede estar vac&#237;o"/>
+      </VRules>
+    </EntryUnit>
+    <PowerIndexUnit id="mov1y#hym2y#page8y#pwu9y" name="Ciudades Eliminadas" linkOrder="mov1y#hym2y#page8y#pwu9y#ln30y" gr:x="105" gr:y="245" sortable="true" checkable="false" useCountQuery="false" entity="ent3y" displayAttributes="ent3y#att11y ent3y#att2y">
+      <Selector id="mov1y#hym2y#page8y#pwu9y#su11y" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1y#hym2y#page8y#pwu9y#su11y#acond6y" name="Eliminado" predicate="eq" booleanOperator="or" implied="false" ignoreCase="false" value="true" attributes="ent3y#att12y"/>
+      </Selector>
+      <Link id="mov1y#hym2y#page8y#pwu9y#ln30y" name="Restaurar" to="mov1y#hym2y#miu10y" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym2y#page8y#pwu9y#ln30y#par70y" name="id_ciudad_ciudad key" source="data[].ent3y#att10y" target="mov1y#hym2y#miu10y.mov2y#mpkg3y#opm11y#icu13y#icp12y"/>
+      </Link>
+    </PowerIndexUnit>
+    <SelectorUnit gr:x="75" gr:y="0" id="mov1y#hym2y#page8y#seu7y" name="Selector pais" entity="ent2y">
+      <Selector id="mov1y#hym2y#page8y#seu7y#su12y" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1y#hym2y#page8y#seu7y#su12y#acond7y" name="NoEliminado" predicate="neq" booleanOperator="and" implied="false" attributes="ent2y#att9y" value="true"/>
+      </Selector>
+      <Link id="mov1y#hym2y#page8y#seu7y#ln31y" name="Flow31" to="mov1y#hym2y#page8y#enu5y" type="transport" validate="true">
+        <LinkParameter id="mov1y#hym2y#page8y#seu7y#ln31y#par33y" name="nombrePais_Ciudad ToPais [label]" source="ent2y#att8yArray" target="mov1y#hym2y#page8y#enu5y#sfld7y_label"/>
+        <LinkParameter id="mov1y#hym2y#page8y#seu7y#ln31y#par34y" name="id_pais_Ciudad ToPais [output]" source="ent2y#att7yArray" target="mov1y#hym2y#page8y#enu5y#sfld7y_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym2y#page8y#pwu8y">
+          <layout:Link link="mov1y#hym2y#page8y#pwu8y#ln26y"/>
+          <layout:Link link="mov1y#hym2y#page8y#pwu8y#ln27y"/>
+          <layout:Attribute attribute="ent3y#att11y"/>
+          <layout:Attribute attribute="ent3y#att2y"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym2y#page8y#pwu9y">
+          <layout:Link link="mov1y#hym2y#page8y#pwu9y#ln30y"/>
+          <layout:Attribute attribute="ent3y#att11y"/>
+          <layout:Attribute attribute="ent3y#att2y"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym2y#page8y#enu5y">
+          <layout:Link link="mov1y#hym2y#page8y#enu5y#ln28y"/>
+          <layout:Link link="mov1y#hym2y#page8y#enu5y#ln29y"/>
+          <layout:Field field="mov1y#hym2y#page8y#enu5y#fld23y"/>
+          <layout:Field field="mov1y#hym2y#page8y#enu5y#sfld7y"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

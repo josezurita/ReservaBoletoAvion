@@ -1,0 +1,5 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1y" name="WebAdmin" protected="true" secure="false" localized="false" landmarks="sv1y#area1y sv1y#area2y sv1y#miu11q" homePage="sv1y#area1y#page2y">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="35" gr:y="470" id="sv1y#miu11q" action="true" landmark="true" moduleId="mov2y#mpkg4q#opm11q"/>
+  </OperationUnits>
+</SiteView>

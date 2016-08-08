@@ -1,0 +1,28 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1120" gr:y="255" id="sv1y#area1y#page8q" name="&#161;&#201;xito!">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv1y#area1y#page8q#mssu3q" name="Se ha registrado su reserva" linkOrder="sv1y#area1y#page8q#mssu3q#ln25q">
+      <Message xml:space="preserve">Su reserva se ha registrado correctamente</Message>
+      <Link id="sv1y#area1y#page8q#mssu3q#ln25q" name="Aceptar" to="sv1y#area1y#page2y" type="normal" validate="true" automaticCoupling="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1y#area1y#page8q#mssu3q">
+          <layout:Link link="sv1y#area1y#page8q#mssu3q#ln25q"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

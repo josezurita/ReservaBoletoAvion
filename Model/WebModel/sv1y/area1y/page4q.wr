@@ -1,0 +1,72 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="5" gr:y="325" id="sv1y#area1y#page4q" name="Vuelos de ida">
+  <ContentUnits>
+    <PowerIndexUnit id="sv1y#area1y#page4q#pwu4q" name="Vuelos disponibles de ida" linkOrder="sv1y#area1y#page4q#pwu4q#ln41q sv1y#area1y#page4q#pwu4q#ln29q" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4y" displayAttributes="ent4y#att32y ent4y#att33y ent4y#att19y ent4y#att20y ent4y#att14y">
+      <Selector id="sv1y#area1y#page4q#pwu4q#su13q" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1y#area1y#page4q#pwu4q#su13q#acond21q" name="NoEliminado" predicate="neq" booleanOperator="and" implied="false" value="true" attributes="ent4y#att21y"/>
+        <AttributesCondition id="sv1y#area1y#page4q#pwu4q#su13q#acond22q" name="Fecha" predicate="eq" booleanOperator="and" implied="false" attributes="ent4y#att19y"/>
+        <AttributesCondition id="sv1y#area1y#page4q#pwu4q#su13q#acond23q" name="Origen" predicate="eq" booleanOperator="and" implied="false" attributes="rel2y#role4y.ent3y#att10y"/>
+        <AttributesCondition id="sv1y#area1y#page4q#pwu4q#su13q#acond24q" name="Destino" predicate="eq" booleanOperator="and" implied="false" attributes="rel3y#role6y.ent3y#att10y"/>
+      </Selector>
+      <Link id="sv1y#area1y#page4q#pwu4q#ln41q" name="Detalle" to="sv1y#area1y#page4q#dau1q" type="normal" automaticCoupling="true" validate="true" preserveForm="true"/>
+      <Link id="sv1y#area1y#page4q#pwu4q#ln29q" name="Reservar" to="sv1y#area1y#miu6q" type="normal" validate="true">
+        <LinkParameter id="sv1y#area1y#page4q#pwu4q#ln29q#par80q" name="id_vuelo_idVuelo" source="data[].ent4y#att13y" target="sv1y#area1y#miu6q.mov2y#mpkg2q#opm5q#icu6q#icp22q"/>
+        <LinkParameter id="sv1y#area1y#page4q#pwu4q#ln29q#par65q" name="N&#250;mero de pasajeros_PASSING_numeroPasajeros" sourceLinkParameter="sv1y#area1y#page2y#enu2y#ln57q#par55q" target="sv1y#area1y#miu6q.mov2y#mpkg2q#opm5q#icu6q#icp24q"/>
+      </Link>
+    </PowerIndexUnit>
+    <DataUnit id="sv1y#area1y#page4q#dau1q" name="Detalle Vuelo" gr:x="30" gr:y="185" entity="ent4y" displayAttributes="ent4y#att32y ent4y#att33y ent4y#att19y ent4y#att15y ent4y#att20y ent4y#att16y ent4y#att14y">
+      <Selector id="sv1y#area1y#page4q#dau1q#su18q" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1y#area1y#page4q#dau1q#su18q#kcond4q" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1y#area1y#page4q#pwu4q">
+          <layout:Attribute attribute="ent4y#att32y"/>
+          <layout:Attribute attribute="ent4y#att33y"/>
+          <layout:Attribute attribute="ent4y#att19y"/>
+          <layout:Attribute attribute="ent4y#att20y"/>
+          <layout:Attribute attribute="ent4y#att14y"/>
+          <layout:Link link="sv1y#area1y#page4q#pwu4q#ln41q"/>
+          <layout:Link link="sv1y#area1y#page4q#pwu4q#ln29q"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1y#area1y#page4q#dau1q">
+          <layout:Attribute attribute="ent4y#att32y"/>
+          <layout:Attribute attribute="ent4y#att33y"/>
+          <layout:Attribute attribute="ent4y#att19y"/>
+          <layout:Attribute attribute="ent4y#att15y"/>
+          <layout:Attribute attribute="ent4y#att20y"/>
+          <layout:Attribute attribute="ent4y#att16y"/>
+          <layout:Attribute attribute="ent4y#att14y"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

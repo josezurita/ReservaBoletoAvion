@@ -1,0 +1,119 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1y#hym5q#page16q" name="Usuarios" landmark="true" gr:x="295" gr:y="95">
+  <ContentUnits>
+    <EntryUnit id="mov1y#hym5q#page16q#enu5q" name="Formulario de usuario" linkOrder="mov1y#hym5q#page16q#enu5q#ln51q mov1y#hym5q#page16q#enu5q#ln52q" gr:x="205" gr:y="0" entity="User" fieldOrder="mov1y#hym5q#page16q#enu5q#fld26q mov1y#hym5q#page16q#enu5q#fld27q mov1y#hym5q#page16q#enu5q#fld23q mov1y#hym5q#page16q#enu5q#fld24q mov1y#hym5q#page16q#enu5q#fld25q mov1y#hym5q#page16q#enu5q#fld28q mov1y#hym5q#page16q#enu5q#sfld6q mov1y#hym5q#page16q#enu5q#msfld5q">
+      <Link id="mov1y#hym5q#page16q#enu5q#ln51q" name="Guardar" to="mov1y#hym5q#miu18q" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym5q#page16q#enu5q#ln51q#par184q" name="bithDate_bithDate" source="mov1y#hym5q#page16q#enu5q#fld28q" target="mov1y#hym5q#miu18q.mov2y#mpkg6q#opm14q#icu17q#icp41q"/>
+        <LinkParameter id="mov1y#hym5q#page16q#enu5q#ln51q#par185q" name="email_email" source="mov1y#hym5q#page16q#enu5q#fld25q" target="mov1y#hym5q#miu18q.mov2y#mpkg6q#opm14q#icu17q#icp42q"/>
+        <LinkParameter id="mov1y#hym5q#page16q#enu5q#ln51q#par186q" name="defaultGroup_Group.oid(defaultGroup)" source="mov1y#hym5q#page16q#enu5q#sfld6q" target="mov1y#hym5q#miu18q.mov2y#mpkg6q#opm14q#icu17q#icp38q"/>
+        <LinkParameter id="mov1y#hym5q#page16q#enu5q#ln51q#par187q" name="groups_Group.oid(groups)" source="mov1y#hym5q#page16q#enu5q#msfld5q" target="mov1y#hym5q#miu18q.mov2y#mpkg6q#opm14q#icu17q#icp39q"/>
+        <LinkParameter id="mov1y#hym5q#page16q#enu5q#ln51q#par188q" name="Key [oid]_KeyCondition17 [oid]" source="key.userOID" target="mov1y#hym5q#miu18q.mov2y#mpkg6q#opm14q#icu17q#icp40q"/>
+        <LinkParameter id="mov1y#hym5q#page16q#enu5q#ln51q#par189q" name="lastName_lastName" source="mov1y#hym5q#page16q#enu5q#fld27q" target="mov1y#hym5q#miu18q.mov2y#mpkg6q#opm14q#icu17q#icp43q"/>
+        <LinkParameter id="mov1y#hym5q#page16q#enu5q#ln51q#par190q" name="name_name" source="mov1y#hym5q#page16q#enu5q#fld26q" target="mov1y#hym5q#miu18q.mov2y#mpkg6q#opm14q#icu17q#icp44q"/>
+        <LinkParameter id="mov1y#hym5q#page16q#enu5q#ln51q#par191q" name="password_password" source="mov1y#hym5q#page16q#enu5q#fld24q" target="mov1y#hym5q#miu18q.mov2y#mpkg6q#opm14q#icu17q#icp45q"/>
+        <LinkParameter id="mov1y#hym5q#page16q#enu5q#ln51q#par192q" name="userName_userName" source="mov1y#hym5q#page16q#enu5q#fld23q" target="mov1y#hym5q#miu18q.mov2y#mpkg6q#opm14q#icu17q#icp46q"/>
+      </Link>
+      <Link id="mov1y#hym5q#page16q#enu5q#ln52q" name="Cancelar" to="mov1y#hym5q#page16q" type="normal" automaticCoupling="true" validate="true"/>
+      <Field id="mov1y#hym5q#page16q#enu5q#fld23q" name="userName" type="string" modifiable="true" attribute="userName"/>
+      <Field id="mov1y#hym5q#page16q#enu5q#fld24q" name="password" type="password" modifiable="true" attribute="password"/>
+      <Field id="mov1y#hym5q#page16q#enu5q#fld25q" name="email" type="string" modifiable="true" attribute="email"/>
+      <Field id="mov1y#hym5q#page16q#enu5q#fld26q" name="name" type="string" modifiable="true" attribute="User#att28y"/>
+      <Field id="mov1y#hym5q#page16q#enu5q#fld27q" name="lastName" type="string" modifiable="true" attribute="User#att29y"/>
+      <Field id="mov1y#hym5q#page16q#enu5q#fld28q" name="bithDate" type="date" modifiable="true" attribute="User#att34y"/>
+      <SelectionField id="mov1y#hym5q#page16q#enu5q#sfld6q" name="defaultGroup" type="string" role="User2DefaultGroup"/>
+      <MultiSelectionField id="mov1y#hym5q#page16q#enu5q#msfld5q" name="groups" type="string" role="User2Group"/>
+    </EntryUnit>
+    <PowerIndexUnit id="mov1y#hym5q#page16q#pwu6q" name="Lista de usuarios" linkOrder="mov1y#hym5q#page16q#pwu6q#ln54q mov1y#hym5q#page16q#pwu6q#ln55q" gr:x="5" gr:y="125" sortable="true" checkable="false" useCountQuery="false" entity="User" displayAttributes="User#att34y email User#att29y User#att28y userName">
+      <Link id="mov1y#hym5q#page16q#pwu6q#ln53q" name="Flow37" to="mov1y#hym5q#page16q#seu7q" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="mov1y#hym5q#page16q#pwu6q#ln54q" name="Editar" to="mov1y#hym5q#page16q#enu5q" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym5q#page16q#pwu6q#ln54q#par149q" name="defaultGroup.oid_defaultGroup - Preselection" source="data[].User2DefaultGroup_groupOID" target="mov1y#hym5q#page16q#enu5q#sfld6q_presel"/>
+        <LinkParameter id="mov1y#hym5q#page16q#pwu6q#ln54q#par150q" name="oid_Key Condition [oid]" source="data[].userOID" target="mov1y#hym5q#page16q#enu5q.userOID"/>
+      </Link>
+      <Link id="mov1y#hym5q#page16q#pwu6q#ln55q" name="Eliminar" to="mov1y#hym5q#miu19q" type="normal" validate="true">
+        <LinkParameter id="mov1y#hym5q#page16q#pwu6q#ln55q#par183q" name="oid_KeyCondition18 [oid]" source="data[].userOID" target="mov1y#hym5q#miu19q.mov2y#mpkg6q#opm15q#icu18q#icp37q"/>
+      </Link>
+    </PowerIndexUnit>
+    <SelectorUnit id="mov1y#hym5q#page16q#seu6q" name="Todos los grupos" gr:x="0" gr:y="0" entity="Group">
+      <Link id="mov1y#hym5q#page16q#seu6q#ln56q" name="Flow40" to="mov1y#hym5q#page16q#enu5q" type="transport" validate="true">
+        <LinkParameter id="mov1y#hym5q#page16q#seu6q#ln56q#par145q" name="groupName_defaultGroup [label]" source="groupNameArray" target="mov1y#hym5q#page16q#enu5q#sfld6q_label"/>
+        <LinkParameter id="mov1y#hym5q#page16q#seu6q#ln56q#par146q" name="oid_defaultGroup [output]" source="groupOIDArray" target="mov1y#hym5q#page16q#enu5q#sfld6q_output"/>
+        <LinkParameter id="mov1y#hym5q#page16q#seu6q#ln56q#par147q" name="groupName_groups [label]" source="groupNameArray" target="mov1y#hym5q#page16q#enu5q#msfld5q_label"/>
+        <LinkParameter id="mov1y#hym5q#page16q#seu6q#ln56q#par148q" name="oid_groups [output]" source="groupOIDArray" target="mov1y#hym5q#page16q#enu5q#msfld5q_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov1y#hym5q#page16q#seu7q" name="M&#243;dulos asociados" gr:x="210" gr:y="120" entity="Group">
+      <Link id="mov1y#hym5q#page16q#seu7q#ln59q" name="Flow42" to="mov1y#hym5q#page16q#enu5q" type="transport" validate="true">
+        <LinkParameter id="mov1y#hym5q#page16q#seu7q#ln59q#par151q" name="oid_groups - Preselection" source="groupOIDArray" target="mov1y#hym5q#page16q#enu5q#msfld5q_presel"/>
+      </Link>
+      <Selector id="mov1y#hym5q#page16q#seu7q#su30q" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1y#hym5q#page16q#seu7q#su30q#rcond3q" name="Grupos" predicate="in" implied="false" role="User2Group"/>
+      </Selector>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym5q#page16q#enu5q">
+          <layout:Link link="mov1y#hym5q#page16q#enu5q#ln51q"/>
+          <layout:Link link="mov1y#hym5q#page16q#enu5q#ln52q"/>
+          <layout:Field field="mov1y#hym5q#page16q#enu5q#fld26q"/>
+          <layout:Field field="mov1y#hym5q#page16q#enu5q#fld27q"/>
+          <layout:Field field="mov1y#hym5q#page16q#enu5q#fld23q"/>
+          <layout:Field field="mov1y#hym5q#page16q#enu5q#fld24q"/>
+          <layout:Field field="mov1y#hym5q#page16q#enu5q#fld25q"/>
+          <layout:Field field="mov1y#hym5q#page16q#enu5q#fld28q"/>
+          <layout:Field field="mov1y#hym5q#page16q#enu5q#sfld6q"/>
+          <layout:Field field="mov1y#hym5q#page16q#enu5q#msfld5q"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1y#hym5q#page16q#pwu6q">
+          <layout:Link link="mov1y#hym5q#page16q#pwu6q#ln54q"/>
+          <layout:Link link="mov1y#hym5q#page16q#pwu6q#ln55q"/>
+          <layout:Attribute attribute="User#att34y"/>
+          <layout:Attribute attribute="email"/>
+          <layout:Attribute attribute="User#att29y"/>
+          <layout:Attribute attribute="User#att28y"/>
+          <layout:Attribute attribute="userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

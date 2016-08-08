@@ -1,0 +1,5 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1y#hym6q" name="PerfilDeUsuario" gr:x="10" gr:y="285">
+  <OperationUnits>
+    <ModuleInstanceUnit id="mov1y#hym6q#miu20q" gr:x="435" gr:y="85" action="true" moduleId="mov2y#mpkg4q#opm11q"/>
+  </OperationUnits>
+</HybridModule>

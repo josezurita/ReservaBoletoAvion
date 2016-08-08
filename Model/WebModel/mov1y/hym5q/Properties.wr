@@ -1,0 +1,15 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1y#hym5q" landmarks="mov1y#hym5q#page16q" gr:x="10" gr:y="230" name="Manejo Usuario">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1y#hym5q#icu16q" gr:x="10" gr:y="190">
+      <OKLink id="mov1y#hym5q#icu16q#oln46q" name="OKFlow29" to="mov1y#hym5q#page16q"/>
+    </InputCollectorUnit>
+    <ModuleInstanceUnit id="mov1y#hym5q#miu18q" gr:x="715" gr:y="135" action="true" moduleId="mov2y#mpkg6q#opm14q">
+      <OKLink id="mov1y#hym5q#miu18q#oln47q" name="OKFlow30" to="mov1y#hym5q#page16q" automaticCoupling="true"/>
+      <KOLink id="mov1y#hym5q#miu18q#kln33q" name="KOFlow27" to="mov1y#hym5q#page17q#mssu7q" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="mov1y#hym5q#miu19q" gr:x="320" gr:y="425" action="true" moduleId="mov2y#mpkg6q#opm15q">
+      <OKLink id="mov1y#hym5q#miu19q#oln48q" name="OKFlow31" to="mov1y#hym5q#page16q" automaticCoupling="true"/>
+      <KOLink id="mov1y#hym5q#miu19q#kln34q" name="KOFlow28" to="mov1y#hym5q#page17q#mssu7q" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</HybridModule>
